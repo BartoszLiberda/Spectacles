@@ -10,7 +10,24 @@
                 include("../../elements/menu.html.php"); 
             ?>
             <div class="display">
-                <h2 style="text-align : center;">🚧 Under Construction 🚧</h2>
+                <form class="formadd">
+                    <h1>Add A Supplier</h1>
+                <div>
+                    <label for="SupplierName">Supplier Name:</label>
+                    <br>
+                    <input type="text" name="SupplierName" id="SupplierName" placeholder="Company Name:" required />
+                </div>
+                <div>
+                    <label for="address">Address:</label>
+                    <br>
+                    <input type="text" name="address" id="address" placeholder="Null" required/>
+                </div>
+                <div>
+                    <label for="Eircode">Eircode:</label>
+                    <br>
+                    <input type="text" name="Eircode" id="Eircode" placeholder="Null" pattern="[A-Z0-9]{7}"/>
+                </div>
+                </form>
             </div>
         </div>
         <footer>

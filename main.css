@@ -88,3 +88,24 @@ a:hover{
 footer {
     text-align: center;
 }
+
+.formadd{
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 4%;
+    margin-left: 4%;
+    align-items: center;
+    background-color: aliceblue;
+    width: 42%;
+}
+
+.formadd input{
+    background-color: transparent;
+}
+
+h1{
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
