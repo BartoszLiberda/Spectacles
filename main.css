@@ -85,6 +85,118 @@ a:hover{
     border-left: solid 1px var(--main);
 }
 
+.top{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    height: 50%;
+}
+
+.divider{
+    border-bottom: solid 1px var(--main) ;
+    border-left: solid 1px var(--main);
+}
+
+.addCustomer{
+    display: flex;
+    align-items: center;
+}
+
+.deleteCustomer{
+    display: flex;
+    align-items: center;
+}
+
+.addCustomer h1{
+    text-align: center;
+}
+
+.deleteCustomer h1{
+    text-align: center;
+}
+
+.addCustomer form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.addCustomer form p input{
+    background-color: transparent;
+    border: solid 1px var(--main);
+}
+
+.formGroup{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.buttonGroup{
+    padding-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.buttonGroup input{
+    border: solid 2px var(--accent);
+    background-color: transparent;
+    color: var(--accent);
+    border-radius: 16px;
+    padding: 5px 10px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.buttonGroup .submit{
+    background-color: var(--accent);
+    color: var(--background);
+}
+
+.buttonGroup .submit:hover{
+    transition-duration: 150ms;
+    background-color: var(--background);
+    color: var(--accent);
+}
+
+.formGroup p{
+    display: flex;
+    flex-direction: column;;
+    margin: 1%;
+}
+
+.bottom h1{
+    text-align: center;
+}
+
+.bottom table{
+    border: solid 1px var(--main);
+    width: 100%;
+    text-align: center;
+}
+
+.bottom table td input{
+    width: 60%;
+    background-color: transparent;
+}
+
+.fname{
+    width: 45%;
+}
+
+.lname{
+    width: 45%;
+}
+
+.eircode{
+    width: 30%;
+}
+
+.address{
+    width: 60%;
+}
+
 footer {
     text-align: center;
 }
