@@ -1,7 +1,8 @@
 <?php session_start() ?>
 <html>
     <head>
-        <link rel="stylesheet" href="../../main.css">
+        <link rel="stylesheet" href="../../style/main.css">
+        <link rel="stylesheet" href="../../style/custmer.css">
     </head>
     <body>
         <div class="content">
