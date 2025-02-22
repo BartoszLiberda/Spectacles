@@ -31,4 +31,7 @@
     if($_POST['EircodeS'] != null){
         $_SESSION["searchSQL"] = $_SESSION["searchSQL"] . " and Eircode = $_POST[EircodeS]";
     }
+
+    header("Location: ../../pages/maintenance/customer.html.php");
+    exit();
 ?>

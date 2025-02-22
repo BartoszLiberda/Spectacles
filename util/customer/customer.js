@@ -17,3 +17,7 @@ function deleteCustomer(){
 function searchCustomer(){
     document.getElementById("searchCustomer").submit();
 }
+
+function editCustomer(id){
+    document.getElementsByClassName(id).setAttribute("disabled", "false");
+}

@@ -17,4 +17,5 @@
 
     mysqli_close($con);
     header("Location: ../../pages/maintenance/customer.html.php");
+    exit();
 ?>
