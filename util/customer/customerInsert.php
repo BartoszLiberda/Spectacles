@@ -6,7 +6,7 @@
     date_default_timezone_set("UTC");
     
     $sql = "Insert into Customer (FirstName,Surname,Eircode,Address,DateOfBirth,PhoneNumber,Del_Tag)
-    VALUES ('$_POST[fname]','$_POST[sname]','$_POST[eircode]','$_POST[address]','$_POST[$dob]','$_POST[phone]','0')";
+    VALUES ('$_POST[fname]','$_POST[sname]','$_POST[eircode]','$_POST[address]','$_POST[dob]','$_POST[phone]','0')";
 
     if(!mysqli_query($con,$sql))
     {
