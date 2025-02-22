@@ -16,4 +16,5 @@
     echo "<script type='text/javascript'>alert('Customer Added')</script>";
 
     mysqli_close($con);
+    header("Location: ../../pages/maintenance/customer.html.php");
 ?>
