@@ -257,12 +257,13 @@
                                 echo "
                                     <tr>
                                         <td><input type='text' value='$id'></td>
-                                        <td><input type='text' value='$name'></td>
-                                        <td><input type='text' value='$surname'></td>
-                                        <td><input type='text' value='$dob'></td>
-                                        <td><input type='text' value='$phone'></td>
-                                        <td><input type='text' value='$address'></td>
-                                        <td><input type='text' value='$eircode'></td>
+                                        <td><input class='$id' type='text' value='$name' disabled></td>
+                                        <td><input class='$id' type='text' value='$surname' disabled></td>
+                                        <td><input class='$id' type='text' value='$dob' disabled></td>
+                                        <td><input class='$id' type='text' value='$phone' disabled></td>
+                                        <td><input class='$id' type='text' value='$address' disabled></td>
+                                        <td><input class='$id' type='text' value='$eircode' disabled></td>
+                                        <td><img src='../../assets/ammendCustomer.svg' onclick=(editCustomer($id))></td>
                                     </tr>
                                 ";
                             }
