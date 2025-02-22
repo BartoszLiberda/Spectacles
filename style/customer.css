@@ -116,7 +116,6 @@
 }
 
 .bottom table{
-    border-bottom: solid 1px var(--main);
     width: 100%;
     text-align: center;
 }
