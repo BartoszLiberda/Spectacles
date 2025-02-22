@@ -1,3 +1,6 @@
+<!--    Bartosz Liberda     -->
+<!--       C00295791        -->
+
 <?php session_start() ?>
 <html>
     <head>
@@ -14,10 +17,13 @@
                 <div class="top">
                     <div class="addCustomer">
                         <form id="addCustomer" action="../../util/customer/customerInsert.php" method="Post">
-                            <h1>Add Customer</h1>
+                            <div class="title">
+                                <img src="../../assets/addCustomer.svg" width="32px" height="32px">
+                                <h1>New Customer</h1>
+                            </div>
                             <div class="formGroup">
                                 <p class="fname">
-                                    <label for="fname">First Name : </label>
+                                    <label for="fname">Name : </label>
                                     <input 
                                         type="text" 
                                         name="fname" 
@@ -25,7 +31,7 @@
                                     />
                                 </p>
                                 <p class="lname">
-                                    <label for="sname">Second Name : </label>
+                                    <label for="sname">Surname : </label>
                                     <input 
                                         type="text" 
                                         name="sname" 
@@ -71,46 +77,168 @@
                             </div>
                             <div class="buttonGroup">
                                 <input class="clear" type="reset" value="Clear"/>
-                                <input class="submit" type="button" onclick="addCustomer()" value="Submit"/>
+                                <input class="submit" type="button" onclick="addCustomer()" value="Add"/>
                             </div>
                         </form>
                     </div>
-                    <script src="../../util/customer/customer.js"></script>
                     <div class="divider"></div>
                     <div class="deleteCustomer">
+                        <form id="deleteCustomer" action="../../util/customer/customerDelete.php">
+                            <div class="title">
+                                <img src="../../assets/removeCustomer.svg" width="32px" height="32px">
+                                <h1>Delete Customer</h1>
+                            </div>
+                            <div class="formGroup">
+                                <p class="customerID">
+                                    <label for="customerID">ID : </label>
+                                    <input 
+                                        type="text"
+                                        name="customerID"
+                                        id="customerID"
+                                    />
+                                </p>
+                                <p class="nameDelete">
+                                    <label for="fnameD">Name : </label>
+                                    <input 
+                                        type="text"
+                                        name="fnameD"
+                                        id="fnameD"
+                                    />
+                                </p>
+                                <p class="surnameDelete">
+                                    <label for="lnameD">Surname : </label>
+                                    <input 
+                                        type="text"
+                                        name="lnameD"
+                                        id="lnameD"
+                                    />
+                                </p>
+                            </div>
+                            <div class="formGroup">
+                                <p class="eircode">
+                                    <label for="eircodeD">Eircode : </label>
+                                    <input 
+                                        type="text"
+                                        name="eircodeD"
+                                        id="eircodeD"
+                                    />
+                                </p>
+                                <p class="address">
+                                    <label for="addressD">Address : </label>
+                                    <input 
+                                        type="text"
+                                        name="addressD"
+                                        id="addressD"
+                                    />
+                                </p>
+                            </div>
+                            <div class="formGroup">
+                                <p>
+                                    <label for="dobD">Date Of Birth : </label>
+                                    <input 
+                                        type="date"
+                                        name="dobD"
+                                        id="dobD"
+                                    />
+                                </p>
+                                <p class="phone">
+                                    <label for="phoneD">Phone Number : </label>
+                                    <input 
+                                        type="text"
+                                        name="phoneD"
+                                        id="phoneD"
+                                    />
+                                </p>
+                            </div>
+                            <div class="buttonGroup">
+                                <input class="clear" type="reset" value="Clear"/>
+                                <input class="submit" type="button" onclick="" value="Delete"/>
+                            </div>
+                        </form>
                     </div>
                 </div>
+                <script src="../../util/customer/customer.js"></script>
                 <div class="divider"></div>
                 <div class="bottom">
-                    <h1>Amend / View</h1>
-                    <form action="">
-                    <input type="button" value="submit">
-
-                        <table>
-                            <tr>
-                                <td><input type="text" name="ID" id="ID"></td>
-                                <td><input type="text" name="fName" id="fName"></td>
-                                <td><input type="text" name="sName" id="sName"></td>
-                                <td><input type="text" name="dob" id="dob"></td>
-                                <td><input type="text" name="pNum" id="pNum"></td>
-                                <td><input type="text" name="Address" id="Address"></td>
-                                <td><input type="text" name="Eircode "id="Eircode"></td>
-                            </tr>
-                            <tr>
-                                <th>ID</th>
-                                <th>First Name</th>
-                                <th>Surname</th>
-                                <th>DOB</th>
-                                <th>Phone Number</th>
-                                <th>Address</th>
-                                <th>Eircode</th>
-                                <th>Select</th>
-                            </tr>
-                            <?php
-
-                            ?>
-                        </table>
-                    </form>
+                    <div class="titleB">
+                        <img src="../../assets/editCustomer.svg" width="32px" height="32px">
+                        <h1>Edit Customer</h1>
+                    </div>
+                    <table>
+                        <tr>
+                            <form id="searchCustomer" action="../../util/customer/customerSearch.php" method="Post">
+                                <td>
+                                    <input 
+                                        type="text" 
+                                        name="IDS" 
+                                        id="IDS"
+                                        placeholder="Enter ID"
+                                    />
+                                </td>
+                                <td>
+                                    <input 
+                                        type="text" 
+                                        name="fNameS" 
+                                        id="fNameS"
+                                        placeholder="Enter Name"
+                                    />
+                                </td>
+                                <td>
+                                    <input 
+                                        type="text" 
+                                        name="sNameS" 
+                                        id="sNameS"
+                                        placeholder="Enter Surname"
+                                    />
+                                </td>
+                                <td>
+                                    <input 
+                                        type="text" 
+                                        name="dobS" 
+                                        id="dobS"
+                                        placeholder="Enter Date Of Birth"
+                                    />
+                                </td>
+                                <td>
+                                    <input 
+                                        type="text" 
+                                        name="pNumS" 
+                                        id="pNumS"
+                                        placeholder="Enter Phone Number"
+                                    />
+                                </td>
+                                <td>
+                                    <input 
+                                        type="text" 
+                                        name="AddressS" 
+                                        id="AddressS"
+                                        placeholder="Enter Address"
+                                    />
+                                </td>
+                                <td>
+                                    <input 
+                                        type="text" 
+                                        name="EircodeS"
+                                        id="EircodeS"
+                                        placeholder="Enter Eircode"
+                                    />
+                                </td>
+                                <td>
+                                    <img src="../../assets/searchCustomer.svg" onclick=(searchCustomer())>
+                                </td>
+                            </form>
+                        </tr>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Surname</th>
+                            <th>DOB</th>
+                            <th>Phone Number</th>
+                            <th>Address</th>
+                            <th>Eircode</th>
+                        </tr>
+                        <?php include("../../util/customer/customerSearch.php") ?>
+                    </table>
                 </div>
             </div>
         </div>

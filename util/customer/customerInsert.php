@@ -1,3 +1,6 @@
+<!--    Bartosz Liberda     -->
+<!--       C00295791        -->
+
 <?php 
     include('../db.inc.php');
     date_default_timezone_set("UTC");
@@ -7,7 +10,7 @@
 
     if(!mysqli_query($con,$sql))
     {
-        die("An Error in the SQL Query : " . myslqi_error($con));
+        die("An Error in the SQL Query : " . mysqli_error($con));
     }
 
     echo "<script type='text/javascript'>alert('Customer Added')</script>";
