@@ -10,14 +10,33 @@
     border-left: solid 1px var(--main);
 }
 
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.titleB{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titleB img{
+    padding-right: 1%;
+}
+
 .addCustomer{
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 30%;
 }
 
 .deleteCustomer{
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .addCustomer h1{
@@ -31,7 +50,6 @@
 .addCustomer form{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .addCustomer form p input{
@@ -39,10 +57,19 @@
     border: solid 1px var(--main);
 }
 
+.deleteCustomer form{
+    width: 70%;
+}
+
+.deleteCustomer form p input{
+    background-color: transparent;
+    border: solid 1px var(--main);
+}
+
 .formGroup{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .buttonGroup{
@@ -83,23 +110,52 @@
     text-align: center;
 }
 
+.bottom{
+    padding-left: 2%;
+    padding-right: 1%;
+}
+
 .bottom table{
-    border: solid 1px var(--main);
+    border-bottom: solid 1px var(--main);
     width: 100%;
     text-align: center;
 }
 
+.bottom table th{
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+}
+
 .bottom table td input{
-    width: 60%;
+    width: 70%;
     background-color: transparent;
+    border: none;
+    border-bottom: solid 1px var(--main);
+    text-align: center;
+}
+
+.bottom table td img{
+    cursor: pointer;
+}
+
+.customerID{
+    width: 15%;
 }
 
 .fname{
     width: 45%;
 }
 
+.nameDelete{
+    width: 35%;
+}
+
 .lname{
     width: 45%;
+}
+
+.surnameDelete{
+    width: 35%;
 }
 
 .eircode{
