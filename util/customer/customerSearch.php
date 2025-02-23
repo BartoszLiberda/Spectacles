@@ -3,10 +3,8 @@
 
 <?php
     session_start();
-
-    if (!isset($_SESSION["customerSearchSQL"])) {
-        $_SESSION["customerSearchSQL"] = "SELECT CustomerID, FirstName, Surname, DateOfBirth, PhoneNumber, Address, Eircode FROM Customer WHERE Del_Tag = 0";
-    }
+    
+    $_SESSION["customerSearchSQL"] = "SELECT CustomerID, FirstName, Surname, DateOfBirth, PhoneNumber, Address, Eircode FROM Customer WHERE Del_Tag = 0";
 
     if($_POST['IDS'] != null){
         $_SESSION["customerSearchSQL"] = $_SESSION["customerSearchSQL"] .= " and CustomerID = $_POST[IDS]";
