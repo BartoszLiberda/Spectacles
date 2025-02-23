@@ -1,5 +1,5 @@
 function addCustomer(){
-    if(confirm("Are You Sure You Want To Proceed ?")){
+    if(confirm("Are You Sure You Want To Submit ?")){
         document.getElementById("addCustomer").submit();
     }else{
         return;
@@ -7,7 +7,7 @@ function addCustomer(){
 }
 
 function deleteCustomer(){
-    if(confirm("Are You Sure You Want To Proceed ?")){
+    if(confirm("Are You Sure You Want To Delete ?")){
         document.getElementById("deleteCustomer").submit();
     }else{
         return;
@@ -46,4 +46,12 @@ function editCustomerCancel(className){
 
     document.getElementById('edit'+className).classList.remove('hidden');
     document.getElementById('edit'+className).classList.add('visible');
+}
+
+function editCustomerAmmend(className){
+    if(confirm("Are You Sure You Want To Submit ? ")){
+        document.getElementById("ammendCustomer"+className).submit();
+    }else{
+        editCustomerCancel(className);
+    }
 }

@@ -258,18 +258,20 @@
                                 $eircode = $row['Eircode'];
                                 echo "
                                     <tr>
-                                        <td><input type='text' value='$id' disabled></td>
-                                        <td><input class='$id' type='text' value='$name' disabled></td>
-                                        <td><input class='$id' type='text' value='$surname' disabled></td>
-                                        <td><input class='$id' type='text' value='$dob' disabled></td>
-                                        <td><input class='$id' type='text' value='$phone' disabled></td>
-                                        <td><input class='$id' type='text' value='$address' disabled></td>
-                                        <td><input class='$id' type='text' value='$eircode' disabled></td>
-                                        <td>
-                                            <img src='../../assets/ammendCustomer.svg' id='edit$id' class='visible' onclick=(editCustomer($id))>
-                                            <img src='../../assets/no.svg' id='cancel$id' class='hidden' onclick=()>
-                                        </td>
-                                        <td><img src='../../assets/yes.svg' id='ammend$id' class='hidden' onclick=()></td>
+                                        <form id='ammendCustomer$id' action='../../util/customer/customerAmmend.php' method='Post'>
+                                            <td><input type='text' name='idA' id='idA' value='$id' disabled></td>
+                                            <td><input class='$id' name='nameA' id='nameA' type='text' value='$name' disabled></td>
+                                            <td><input class='$id' name='sNameA' id='sNameA' type='text' value='$surname' disabled></td>
+                                            <td><input class='$id' name='dobA' id='dobA' type='text' value='$dob' disabled></td>
+                                            <td><input class='$id' name='phoneA' id='phoneA' type='text' value='$phone' disabled></td>
+                                            <td><input class='$id' name='addressA' id='addressA' type='text' value='$address' disabled></td>
+                                            <td><input class='$id' name='eircodeA' id='eircodeA' type='text' value='$eircode' disabled></td>
+                                            <td>
+                                                <img src='../../assets/ammendCustomer.svg' id='edit$id' class='visible' onclick=(editCustomer($id))>
+                                                <img src='../../assets/no.svg' id='cancel$id' class='hidden' onclick=()>
+                                            </td>
+                                            <td><img src='../../assets/yes.svg' id='ammend$id' class='hidden' onclick=()></td>
+                                        </form>
                                     </tr>
                                 ";
                             }
