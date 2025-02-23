@@ -242,7 +242,7 @@
                                 $_SESSION["customerSearchSQL"] = "SELECT CustomerID, FirstName, Surname, DateOfBirth, PhoneNumber, Address, Eircode FROM Customer WHERE Del_Tag = 0";
                             }
                             include "../../util/db.inc.php";
-                            if(!$result = mysqli_query($con,$_SESSION["searchSQL"])){
+                            if(!$result = mysqli_query($con,$_SESSION["customerSearchSQL"])){
                                 die('Error in querying the database : ' . mysqli_error($con));
                             }
                         
