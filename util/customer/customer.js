@@ -18,6 +18,9 @@ function searchCustomer(){
     document.getElementById("searchCustomer").submit();
 }
 
-function editCustomer(id){
-    document.getElementsByClassName(id).removeAttribute('disabled');
+function editCustomer(className){
+    let elements = document.getElementsByClassName(className);
+    for (let element of elements){
+        element.removeAttribute('disabled');
+    }
 }
