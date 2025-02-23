@@ -265,7 +265,7 @@
                                         <td><input class='$id' type='text' value='$phone' disabled></td>
                                         <td><input class='$id' type='text' value='$address' disabled></td>
                                         <td><input class='$id' type='text' value='$eircode' disabled></td>
-                                        <td><img src='../../assets/ammendCustomer.svg' onclick=(editCustomer($id))></td>
+                                        <td><img src='../../assets/ammendCustomer.svg' id='edit$id' class='visible' onclick=(editCustomer($id))></td>
                                     </tr>
                                 ";
                             }

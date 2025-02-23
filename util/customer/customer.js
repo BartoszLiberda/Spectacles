@@ -23,4 +23,6 @@ function editCustomer(className){
     for (let element of elements){
         element.removeAttribute('disabled');
     }
+    document.getElementById('edit'+className).remove('visible');
+    document.getElementById('edit'+className).add('hidden');
 }
