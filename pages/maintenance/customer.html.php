@@ -238,9 +238,6 @@
                             <th>Eircode</th>
                         </tr>
                         <?php 
-                            if($_SESSION("customerSearchSQL") == null){
-                                $_SESSION["customerSearchSQL"] = "SELECT CustomerID, FirstName, Surname, DateOfBirth, PhoneNumber, Address, Eircode FROM Customer WHERE Del_Tag = 0";
-                            }
                             include "../../util/db.inc.php";
                             if(!$result = mysqli_query($con,$_SESSION["searchSQL"])){
                                 die('Error in querying the database : ' . mysqli_error($con));
