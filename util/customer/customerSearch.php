@@ -13,7 +13,7 @@
     }
 
     if($_POST['fNameS'] != null){
-        $_SESSION["customerSearchSQL"] = $_SESSION["customerSearchSQL"] .= " and FirstName = $_POST[fNameS]";
+        $_SESSION["customerSearchSQL"] = $_SESSION["customerSearchSQL"] .= " and $_POST[fNameS] = FirstName";
     }
 
     if($_POST['sNameS'] != null){
