@@ -11,11 +11,11 @@
     }
 
     if($_POST['fNameS'] != null){
-        $_SESSION["customerSearchSQL"] = $_SESSION["customerSearchSQL"] .= " and FirstName = '$_POST[fNameS]%'";
+        $_SESSION["customerSearchSQL"] = $_SESSION["customerSearchSQL"] .= " and FirstName LIKE '$_POST[fNameS]%'";
     }
 
     if($_POST['sNameS'] != null){
-        $_SESSION["customerSearchSQL"] = $_SESSION["customerSearchSQL"] .= " and Surname = '$_POST[sNameS]%'";
+        $_SESSION["customerSearchSQL"] = $_SESSION["customerSearchSQL"] .= " and Surname LIKE '$_POST[sNameS]%'";
     }
 
     if($_POST['dobS'] != null){
@@ -23,15 +23,15 @@
     }
 
     if($_POST['pNumS'] != null){
-        $_SESSION["customerSearchSQL"] = $_SESSION["customerSearchSQL"] .= " and PhoneNumber = '$_POST[pNumS]%'";
+        $_SESSION["customerSearchSQL"] = $_SESSION["customerSearchSQL"] .= " and PhoneNumber LIKE '$_POST[pNumS]%'";
     }
 
     if($_POST['AddressS'] != null){
-        $_SESSION["customerSearchSQL"] = $_SESSION["customerSearchSQL"] .= " and Address = '$_POST[AddressS]%'";
+        $_SESSION["customerSearchSQL"] = $_SESSION["customerSearchSQL"] .= " and Address LIKE '$_POST[AddressS]%'";
     }
 
     if($_POST['EircodeS'] != null){
-        $_SESSION["customerSearchSQL"] = $_SESSION["customerSearchSQL"] .= " and Eircode = '$_POST[EircodeS]%'";
+        $_SESSION["customerSearchSQL"] = $_SESSION["customerSearchSQL"] .= " and Eircode LIKE '$_POST[EircodeS]%'";
     }
 
     header("Location: ../../pages/maintenance/customer.html.php");
