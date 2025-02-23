@@ -259,7 +259,8 @@
                                 echo "
                                     <tr>
                                         <form id='ammendCustomer$id' action='../../util/customer/customerAmmend.php' method='Post'>
-                                            <td><input type='text' name='idA' id='idA' value='$id' disabled></td>
+                                            <input type='hidden' name='idA' id='idA' value='$id'>
+                                            <td><input type='text' value='$id' disabled></td>
                                             <td><input class='$id' name='nameA' id='nameA' type='text' value='$name' disabled></td>
                                             <td><input class='$id' name='sNameA' id='sNameA' type='text' value='$surname' disabled></td>
                                             <td><input class='$id' name='dobA' id='dobA' type='text' value='$dob' disabled></td>
