@@ -32,3 +32,18 @@ function editCustomer(className){
     document.getElementById('ammend'+className).classList.remove('hidden');
     document.getElementById('ammend'+className).classList.add('visible');
 }
+
+function editCustomerCancel(className){
+    let elements = document.getElementsByClassName(className);
+    for (let element of elements){
+        element.setAttribute('disabled');
+    }
+    document.getElementById('ammend'+className).classList.remove('visible');
+    document.getElementById('ammend'+className).classList.add('hidden');
+
+    document.getElementById('cancel'+className).classList.remove('visible');
+    document.getElementById('cancel'+className).classList.add('hidden');
+
+    document.getElementById('edit'+className).classList.remove('hidden');
+    document.getElementById('edit'+className).classList.add('visible');
+}
