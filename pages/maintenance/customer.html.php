@@ -238,7 +238,9 @@
                             <th>Eircode</th>
                         </tr>
                         <?php 
-                            $_SESSION["searchSQL"] = "SELECT CustomerID, FirstName, Surname, DateOfBirth, PhoneNumber, Address, Eircode FROM Customer WHERE Del_Tag = 0";
+                            if($_SESSION("customerSearchSQL") == null){
+                                $_SESSION["customerSearchSQL"] = "SELECT CustomerID, FirstName, Surname, DateOfBirth, PhoneNumber, Address, Eircode FROM Customer WHERE Del_Tag = 0";
+                            }
                             include "../../util/db.inc.php";
                             if(!$result = mysqli_query($con,$_SESSION["searchSQL"])){
                                 die('Error in querying the database : ' . mysqli_error($con));
@@ -256,7 +258,7 @@
                                 $eircode = $row['Eircode'];
                                 echo "
                                     <tr>
-                                        <td><input type='text' value='$id'></td>
+                                        <td><input type='text' value='$id' disabled></td>
                                         <td><input class='$id' type='text' value='$name' disabled></td>
                                         <td><input class='$id' type='text' value='$surname' disabled></td>
                                         <td><input class='$id' type='text' value='$dob' disabled></td>

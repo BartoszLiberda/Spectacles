@@ -2,6 +2,7 @@
     session_start(); 
     date_default_timezone_set("UTC");
     $_SESSION['page'] = 'index';
+    $_SESSION["customerSearchSQL"] = "SELECT CustomerID, FirstName, Surname, DateOfBirth, PhoneNumber, Address, Eircode FROM Customer WHERE Del_Tag = 0";
 ?>
 <html>
     <head>

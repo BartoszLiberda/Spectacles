@@ -19,5 +19,5 @@ function searchCustomer(){
 }
 
 function editCustomer(id){
-    document.getElementsByClassName(id).setAttribute("disabled", "false");
+    document.getElementsByClassName(id).removeAttribute('disabled');
 }
