@@ -263,7 +263,7 @@
                                             <td><input type='text' value='$id' disabled></td>
                                             <td><input class='$id' name='nameA' id='nameA' type='text' value='$name' disabled></td>
                                             <td><input class='$id' name='sNameA' id='sNameA' type='text' value='$surname' disabled></td>
-                                            <td><input class='$id' name='dobA' id='dobA' type='text' value='$dob' disabled></td>
+                                            <td><input class='$id' name='dobA' id='dobA' type='date' value='$dob' disabled></td>
                                             <td><input class='$id' name='phoneA' id='phoneA' type='text' value='$phone' disabled></td>
                                             <td><input class='$id' name='addressA' id='addressA' type='text' value='$address' disabled></td>
                                             <td><input class='$id' name='eircodeA' id='eircodeA' type='text' value='$eircode' disabled></td>
