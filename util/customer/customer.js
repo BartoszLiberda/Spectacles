@@ -23,12 +23,12 @@ function editCustomer(className){
     for (let element of elements){
         element.removeAttribute('disabled');
     }
-    document.getElementById('edit'+className).remove('visible');
-    document.getElementById('edit'+className).add('hidden');
+    document.getElementById('edit'+className).classList.remove('visible');
+    document.getElementById('edit'+className).classList.add('hidden');
 
-    document.getElementById('cancel'+className).remove('hidden');
-    document.getElementById('cancel'+className).add('visible');
+    document.getElementById('cancel'+className).classList.remove('hidden');
+    document.getElementById('cancel'+className).classList.add('visible');
 
-    document.getElementById('ammend'+className).remove('hidden');
-    document.getElementById('ammend'+className).add('visible');
+    document.getElementById('ammend'+className).classList.remove('hidden');
+    document.getElementById('ammend'+className).classList.add('visible');
 }
