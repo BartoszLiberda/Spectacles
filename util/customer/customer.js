@@ -25,4 +25,10 @@ function editCustomer(className){
     }
     document.getElementById('edit'+className).remove('visible');
     document.getElementById('edit'+className).add('hidden');
+
+    document.getElementById('cancel'+className).remove('hidden');
+    document.getElementById('cancel'+className).remove('visible');
+
+    document.getElementById('ammend'+className).remove('hidden');
+    document.getElementById('ammend'+className).remove('visible');
 }
