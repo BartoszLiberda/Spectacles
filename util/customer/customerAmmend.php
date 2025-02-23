@@ -1,9 +1,10 @@
 <?php
     include('../db.inc.php');
-    date_default_timezone_set("UTC");
+
+    $id = $_POST[idA];
     
     $sql = "UPDATE Customer SET FirstName = '$_POST[nameA]', Surname = '$_POST[sNameA]', Eircode = '$_POST[eircodeA]', Address = '$_POST[addressA]', DateOfBirth = '$_POST[dobA]', PhoneNumber = '$_POST[phoneA]'
-    WHERE CustomerID = '$_POST[idA]'";
+    WHERE CustomerID = $id";
 
     if(!mysqli_query($con,$sql))
     {
