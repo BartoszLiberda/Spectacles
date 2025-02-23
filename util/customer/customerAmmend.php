@@ -1,7 +1,7 @@
 <?php
     include('../db.inc.php');
 
-    $id = $_POST[idA];
+    $id = '$_POST[idA]';
     
     $sql = "UPDATE Customer SET FirstName = '$_POST[nameA]', Surname = '$_POST[sNameA]', Eircode = '$_POST[eircodeA]', Address = '$_POST[addressA]', DateOfBirth = '$_POST[dobA]', PhoneNumber = '$_POST[phoneA]'
     WHERE CustomerID = $id";
