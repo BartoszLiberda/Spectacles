@@ -268,8 +268,8 @@
                                             <td><input class='$id' name='eircodeA' id='eircodeA' type='text' value='$eircode' disabled></td>
                                             <td>
                                                 <img src='../../assets/ammendCustomer.svg' id='edit$id' class='visible' onclick='editCustomer($id)'>
-                                                <img src='../../assets/no.svg' id='cancel$id' class='hidden' onclick='editCustomerCancel($id)'>
                                             </td>
+                                            <td><img src='../../assets/no.svg' id='cancel$id' class='hidden' onclick='editCustomerCancel($id)'></td>
                                             <td><img src='../../assets/yes.svg' id='ammend$id' class='hidden' onclick='editCustomerAmmend($id)'></td>
                                         </form>
                                     </tr>
