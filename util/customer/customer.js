@@ -21,7 +21,7 @@ function searchCustomer(){
 function editCustomer(className){
     let elements = document.getElementsByClassName(className);
     for (let element of elements){
-        element.removeAttribute('disabled');
+        element.disable = false;
     }
     document.getElementById('edit'+className).classList.remove('visible');
     document.getElementById('edit'+className).classList.add('hidden');
@@ -36,7 +36,7 @@ function editCustomer(className){
 function editCustomerCancel(className){
     let elements = document.getElementsByClassName(className);
     for (let element of elements){
-        element.setAttribute('disabled');
+        element.disabled = true;
     }
     document.getElementById('ammend'+className).classList.remove('visible');
     document.getElementById('ammend'+className).classList.add('hidden');
