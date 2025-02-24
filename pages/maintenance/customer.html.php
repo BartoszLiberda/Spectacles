@@ -252,6 +252,7 @@
                                 $name = $row['FirstName'];
                                 $surname = $row['Surname'];
                                 $dob = date_create($row['DateOfBirth']);
+                                $dob = date_format($dob,"d-m-Y");
                                 $phone = $row['PhoneNumber'];
                                 $address = $row['Address'];
                                 $eircode = $row['Eircode'];
