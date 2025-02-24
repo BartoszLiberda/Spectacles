@@ -251,8 +251,7 @@
                                 $id = $row['CustomerID'];
                                 $name = $row['FirstName'];
                                 $surname = $row['Surname'];
-                                $date = date_create($row['DateOfBirth']);
-                                $dob = date_format($date,"Y/m/d");
+                                $dob = $row['DateOfBirth'];
                                 $phone = $row['PhoneNumber'];
                                 $address = $row['Address'];
                                 $eircode = $row['Eircode'];
