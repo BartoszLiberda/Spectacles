@@ -21,7 +21,7 @@ function searchCustomer(){
 function editCustomer(className){
     let elements = document.getElementsByClassName(className);
     for (let element of elements){
-        element.disable = false;
+        element.removeAttribute('disabled');
     }
     document.getElementById('edit'+className).classList.remove('visible');
     document.getElementById('edit'+className).classList.add('hidden');
