@@ -28,6 +28,7 @@
                                         type="text" 
                                         name="fname" 
                                         id="fname"
+                                        required
                                     />
                                 </p>
                                 <p class="lname">
@@ -36,6 +37,7 @@
                                         type="text" 
                                         name="sname" 
                                         id="sname"
+                                        required
                                     />
                                 </p>
                             </div>
@@ -46,6 +48,7 @@
                                         type="text"
                                         name="eircode" 
                                         id="eircode"
+                                        required
                                     />
                                 </p>
                                 <p class="address">
@@ -54,6 +57,7 @@
                                         type="text" 
                                         name="address" 
                                         id="address"
+                                        required
                                     />
                                 </p>
                             </div>
@@ -64,26 +68,29 @@
                                         type="date" 
                                         name="dob" 
                                         id="dob"
+                                        required
                                     />
                                 </p>
                                 <p class="phone">
-                                    <label for="phone">Phone Number : </label>
+                                    <label for="phone">Mobile Number : </label>
                                     <input 
                                         type="text" 
                                         name="phone" 
                                         id="phone"
+                                        required
                                     />
                                 </p>
                             </div>
+                            <p class="error" id='customerAddError'></p>
                             <div class="buttonGroup">
-                                <input class="clear" type="reset" value="Clear"/>
+                                <input class="clear" type="reset" onclick="" value="Clear"/>
                                 <input class="submit" type="button" onclick="addCustomer()" value="Add"/>
                             </div>
                         </form>
                     </div>
                     <div class="divider"></div>
                     <div class="deleteCustomer">
-                        <form id="deleteCustomer" action="../../util/customer/customerDelete.php">
+                        <form id="deleteCustomer" action="../../util/customer/customerDelete.php" method="Post">
                             <div class="title">
                                 <img src="../../assets/removeCustomer.svg" width="32px" height="32px">
                                 <h1>Delete Customer</h1>
@@ -103,6 +110,7 @@
                                         type="text"
                                         name="fnameD"
                                         id="fnameD"
+                                        disabled
                                     />
                                 </p>
                                 <p class="surnameDelete">
@@ -111,6 +119,7 @@
                                         type="text"
                                         name="lnameD"
                                         id="lnameD"
+                                        disabled
                                     />
                                 </p>
                             </div>
@@ -121,6 +130,7 @@
                                         type="text"
                                         name="eircodeD"
                                         id="eircodeD"
+                                        disabled
                                     />
                                 </p>
                                 <p class="address">
@@ -129,6 +139,7 @@
                                         type="text"
                                         name="addressD"
                                         id="addressD"
+                                        disabled
                                     />
                                 </p>
                             </div>
@@ -139,21 +150,28 @@
                                         type="date"
                                         name="dobD"
                                         id="dobD"
+                                        disabled
                                     />
                                 </p>
                                 <p class="phone">
-                                    <label for="phoneD">Phone Number : </label>
+                                    <label for="phoneD">Mobile Number : </label>
                                     <input 
                                         type="text"
                                         name="phoneD"
                                         id="phoneD"
+                                        disabled
                                     />
                                 </p>
                             </div>
+                            <p class="error" id="deleteCustomerError"></p>
                             <div class="buttonGroup">
                                 <input class="clear" type="reset" value="Clear"/>
-                                <input class="submit" type="button" onclick="" value="Delete"/>
+                                <input hidden class="submit" id="deleteButton" type="button" value="Delete"/>
+                                <input class="submit" id="findButton" type="button" onclick="customerDelete()" value="Find">
                             </div>
+                        </form>
+                        <form hidden id="findCustomer" action="../../util/customer/customerFind.php" method="Post">
+                            <input type="hidden" id="customerID2" name="customerID2">
                         </form>
                     </div>
                 </div>
@@ -233,14 +251,16 @@
                             <th>Name</th>
                             <th>Surname</th>
                             <th>DOB</th>
-                            <th>Phone Number</th>
+                            <th>Mobile Number</th>
                             <th>Address</th>
                             <th>Eircode</th>
                         </tr>
                         <?php 
-                            $_SESSION["searchSQL"] = "SELECT CustomerID, FirstName, Surname, DateOfBirth, PhoneNumber, Address, Eircode FROM Customer WHERE Del_Tag = 0";
+                            if (!isset($_SESSION["customerSearchSQL"])) {
+                                $_SESSION["customerSearchSQL"] = "SELECT CustomerID, FirstName, Surname, DateOfBirth, PhoneNumber, Address, Eircode FROM Customer WHERE Del_Tag = 0";
+                            }
                             include "../../util/db.inc.php";
-                            if(!$result = mysqli_query($con,$_SESSION["searchSQL"])){
+                            if(!$result = mysqli_query($con,$_SESSION["customerSearchSQL"])){
                                 die('Error in querying the database : ' . mysqli_error($con));
                             }
                         
@@ -249,21 +269,27 @@
                                 $id = $row['CustomerID'];
                                 $name = $row['FirstName'];
                                 $surname = $row['Surname'];
-                                $dob = date_create($row['DateOfBirth']);
-                                $dob = date_format($dob,"d-m-Y");
+                                $dob = $row['DateOfBirth'];
                                 $phone = $row['PhoneNumber'];
                                 $address = $row['Address'];
                                 $eircode = $row['Eircode'];
                                 echo "
                                     <tr>
-                                        <td><input type='text' value='$id'></td>
-                                        <td><input class='$id' type='text' value='$name' disabled></td>
-                                        <td><input class='$id' type='text' value='$surname' disabled></td>
-                                        <td><input class='$id' type='text' value='$dob' disabled></td>
-                                        <td><input class='$id' type='text' value='$phone' disabled></td>
-                                        <td><input class='$id' type='text' value='$address' disabled></td>
-                                        <td><input class='$id' type='text' value='$eircode' disabled></td>
-                                        <td><img src='../../assets/ammendCustomer.svg' onclick=(editCustomer($id))></td>
+                                        <form id='ammendCustomer$id' action='../../util/customer/customerAmmend.php' method='Post'>
+                                            <input type='hidden' name='idA' id='idA' value='$id'>
+                                            <td><input type='text' value='$id' disabled></td>
+                                            <td><input class='$id' name='nameA' id='nameA' type='text' value='$name' disabled></td>
+                                            <td><input class='$id' name='sNameA' id='sNameA' type='text' value='$surname' disabled></td>
+                                            <td><input class='$id' name='dobA' id='dobA' type='date' value='$dob' disabled></td>
+                                            <td><input class='$id' name='phoneA' id='phoneA' type='text' value='$phone' disabled></td>
+                                            <td><input class='$id' name='addressA' id='addressA' type='text' value='$address' disabled></td>
+                                            <td><input class='$id' name='eircodeA' id='eircodeA' type='text' value='$eircode' disabled></td>
+                                            <td>
+                                                <img src='../../assets/ammendCustomer.svg' id='edit$id' class='visible' onclick='editCustomer($id)'>
+                                            </td>
+                                            <td><img src='../../assets/no.svg' id='cancel$id' class='hidden' onclick='editCustomerCancel($id)'></td>
+                                            <td><img src='../../assets/yes.svg' id='ammend$id' class='hidden' onclick='editCustomerAmmend($id)'></td>
+                                        </form>
                                     </tr>
                                 ";
                             }

@@ -57,6 +57,16 @@
     border: solid 1px var(--main);
 }
 
+.addCustomer form p input.invalid{
+    background-color: transparent;
+    border: solid 1px red;
+}
+
+.addCustomer form p input.valid{
+    background-color: transparent;
+    border: solid 1px var(--accent);
+}
+
 .deleteCustomer form{
     width: 70%;
 }
@@ -73,7 +83,7 @@
 }
 
 .buttonGroup{
-    padding-top: 5%;
+    padding-top: 1%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -164,4 +174,22 @@
 
 .address{
     width: 60%;
+}
+
+.hidden{
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.visible{
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.error{
+    color: red;
+    font-size: small;
+    text-align: center;
 }
