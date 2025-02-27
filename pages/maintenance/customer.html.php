@@ -28,6 +28,7 @@
                                         type="text" 
                                         name="fname" 
                                         id="fname"
+                                        required
                                     />
                                 </p>
                                 <p class="lname">
@@ -36,6 +37,7 @@
                                         type="text" 
                                         name="sname" 
                                         id="sname"
+                                        required
                                     />
                                 </p>
                             </div>
@@ -46,6 +48,7 @@
                                         type="text"
                                         name="eircode" 
                                         id="eircode"
+                                        required
                                     />
                                 </p>
                                 <p class="address">
@@ -54,6 +57,7 @@
                                         type="text" 
                                         name="address" 
                                         id="address"
+                                        required
                                     />
                                 </p>
                             </div>
@@ -64,26 +68,29 @@
                                         type="date" 
                                         name="dob" 
                                         id="dob"
+                                        required
                                     />
                                 </p>
                                 <p class="phone">
-                                    <label for="phone">Phone Number : </label>
+                                    <label for="phone">Mobile Number : </label>
                                     <input 
                                         type="text" 
                                         name="phone" 
                                         id="phone"
+                                        required
                                     />
                                 </p>
                             </div>
+                            <p class="error" id='customerAddError'></p>
                             <div class="buttonGroup">
-                                <input class="clear" type="reset" value="Clear"/>
+                                <input class="clear" type="reset" onclick="" value="Clear"/>
                                 <input class="submit" type="button" onclick="addCustomer()" value="Add"/>
                             </div>
                         </form>
                     </div>
                     <div class="divider"></div>
                     <div class="deleteCustomer">
-                        <form id="deleteCustomer" action="../../util/customer/customerDelete.php">
+                        <form id="deleteCustomer" action="../../util/customer/customerDelete.php" method="Post">
                             <div class="title">
                                 <img src="../../assets/removeCustomer.svg" width="32px" height="32px">
                                 <h1>Delete Customer</h1>
@@ -103,6 +110,7 @@
                                         type="text"
                                         name="fnameD"
                                         id="fnameD"
+                                        disabled
                                     />
                                 </p>
                                 <p class="surnameDelete">
@@ -111,6 +119,7 @@
                                         type="text"
                                         name="lnameD"
                                         id="lnameD"
+                                        disabled
                                     />
                                 </p>
                             </div>
@@ -121,6 +130,7 @@
                                         type="text"
                                         name="eircodeD"
                                         id="eircodeD"
+                                        disabled
                                     />
                                 </p>
                                 <p class="address">
@@ -129,6 +139,7 @@
                                         type="text"
                                         name="addressD"
                                         id="addressD"
+                                        disabled
                                     />
                                 </p>
                             </div>
@@ -139,21 +150,28 @@
                                         type="date"
                                         name="dobD"
                                         id="dobD"
+                                        disabled
                                     />
                                 </p>
                                 <p class="phone">
-                                    <label for="phoneD">Phone Number : </label>
+                                    <label for="phoneD">Mobile Number : </label>
                                     <input 
                                         type="text"
                                         name="phoneD"
                                         id="phoneD"
+                                        disabled
                                     />
                                 </p>
                             </div>
+                            <p class="error" id="deleteCustomerError"></p>
                             <div class="buttonGroup">
                                 <input class="clear" type="reset" value="Clear"/>
-                                <input class="submit" type="button" onclick="" value="Delete"/>
+                                <input hidden class="submit" id="deleteButton" type="button" value="Delete"/>
+                                <input class="submit" id="findButton" type="button" onclick="customerDelete()" value="Find">
                             </div>
+                        </form>
+                        <form hidden id="findCustomer" action="../../util/customer/customerFind.php" method="Post">
+                            <input type="hidden" id="customerID2" name="customerID2">
                         </form>
                     </div>
                 </div>
@@ -233,7 +251,7 @@
                             <th>Name</th>
                             <th>Surname</th>
                             <th>DOB</th>
-                            <th>Phone Number</th>
+                            <th>Mobile Number</th>
                             <th>Address</th>
                             <th>Eircode</th>
                         </tr>
