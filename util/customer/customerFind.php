@@ -5,7 +5,7 @@
 
     $sqlLookUp = "SELECT * FROM Customer WHERE CustomerID = $id and Del_Tag = 0";
 
-    if(!mysqli_query($con,$sqlLookUp))
+    if(!$result = mysqli_query($con,$sqlLookUp))
     {
         die("An Error in the SQL Query : " . mysqli_error($con));
     }
