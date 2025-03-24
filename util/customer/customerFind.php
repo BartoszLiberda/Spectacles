@@ -1,7 +1,9 @@
 <?php
     include('../db.inc.php');
 
-    $sqlLookUp = "SELECT * FROM Customer WHERE Del_Tag = 0  and CustomerID = ".$_POST['customerID'];
+    $id = $_POST['customerID'];
+
+    $sqlLookUp = "SELECT * FROM Customer WHERE CustomerID = $id and Del_Tag = 0";
 
     if(!$result = mysqli_query($con,$sqlLookUp))
     {
