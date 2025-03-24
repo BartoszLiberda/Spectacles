@@ -1,0 +1,16 @@
+h1{
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+.receipt{
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    text-align: center;
+}
+
+.receipt th{
+    text-align: center;
+    padding-bottom: 2%;
+}

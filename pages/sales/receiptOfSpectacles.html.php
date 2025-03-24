@@ -2,6 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="../../style/main.css">
+        <link rel="stylesheet" href="../../style/receiptOfSpectacles.css">
     </head>
     <body>
         <div class="content">
@@ -10,7 +11,21 @@
                 include("../../elements/menu.html.php"); 
             ?>
             <div class="display">
-                <h2 style="text-align : center;">🚧 Under Construction 🚧</h2>
+                <h1>Reciept Of Spectacles</h1>
+                <table class="receipt">
+                    <tr>
+                        <th>Date</th>
+                        <th>Lenses</th>
+                        <th>Coating</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td>sample</td>
+                        <td>sample</td>
+                        <td>sample</td>
+                        <td>sample</td>
+                    </tr>
+                </table>
             </div>
         </div>
         <footer>

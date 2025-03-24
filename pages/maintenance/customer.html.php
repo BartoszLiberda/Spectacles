@@ -90,7 +90,7 @@
                     </div>
                     <div class="divider"></div>
                     <div class="deleteCustomer">
-                        <form id="deleteCustomer" action="../../util/customer/customerDelete.php" method="Post">
+                        <form id="deleteCustomer" action="../../util/customer/customerFind.php" method="Post">
                             <div class="title">
                                 <img src="../../assets/removeCustomer.svg" width="32px" height="32px">
                                 <h1>Delete Customer</h1>
@@ -110,6 +110,7 @@
                                         type="text"
                                         name="fnameD"
                                         id="fnameD"
+                                        value="<?php if(ISSET($_SESSION['customerFirstNameDelete']))echo $_SESSION['personid'] ?>"
                                         disabled
                                     />
                                 </p>
@@ -119,6 +120,7 @@
                                         type="text"
                                         name="lnameD"
                                         id="lnameD"
+                                        value="<?php if(ISSET($_SESSION['customerSurnameDelete']))echo $_SESSION['personid'] ?>"
                                         disabled
                                     />
                                 </p>
@@ -130,6 +132,7 @@
                                         type="text"
                                         name="eircodeD"
                                         id="eircodeD"
+                                        value="<?php if(ISSET($_SESSION['customerEircodeDelete']))echo $_SESSION['personid'] ?>"
                                         disabled
                                     />
                                 </p>
@@ -139,6 +142,7 @@
                                         type="text"
                                         name="addressD"
                                         id="addressD"
+                                        value="<?php if(ISSET($_SESSION['customerAddressDelete']))echo $_SESSION['personid'] ?>"
                                         disabled
                                     />
                                 </p>
@@ -150,6 +154,7 @@
                                         type="date"
                                         name="dobD"
                                         id="dobD"
+                                        value="<?php if(ISSET($_SESSION['customerDOBDelete']))echo $_SESSION['personid'] ?>"
                                         disabled
                                     />
                                 </p>
@@ -159,6 +164,7 @@
                                         type="text"
                                         name="phoneD"
                                         id="phoneD"
+                                        value="<?php if(ISSET($_SESSION['customerPhoneDelete']))echo $_SESSION['personid'] ?>"
                                         disabled
                                     />
                                 </p>
@@ -169,9 +175,6 @@
                                 <input hidden class="submit" id="deleteButton" type="button" value="Delete"/>
                                 <input class="submit" id="findButton" type="button" onclick="customerDelete()" value="Find">
                             </div>
-                        </form>
-                        <form hidden id="findCustomer" action="../../util/customer/customerFind.php" method="Post">
-                            <input type="hidden" id="customerID2" name="customerID2">
                         </form>
                     </div>
                 </div>
