@@ -173,7 +173,7 @@
                             <div class="buttonGroup">
                                 <input class="clear" type="reset" value="Clear"/>
                                 <input hidden class="submit" id="deleteButton" type="button" value="Delete"/>
-                                <input class="submit" id="findButton" type="button" onclick="customerDelete()" value="Find">
+                                <input class="submit" id="findButton" type="submit" value="Find">
                             </div>
                         </form>
                     </div>
