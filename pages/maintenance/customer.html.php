@@ -172,7 +172,7 @@
                             </div>
                             <p class="error" id="deleteCustomerError"></p>
                             <div class="buttonGroup">
-                                <input class="clear" type="reset" value="Clear"/>
+                                <input class="clear" type="button" value="Clear"/>
                                 <input hidden class="submit" id="deleteButton" type="button" value="Delete"/>
                                 <input class="submit" id="findButton" type="button" onclick="customerDelete()" value="Find">
                             </div>

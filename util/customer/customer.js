@@ -179,8 +179,6 @@ function editCustomerAmmend(className){
 }
 
 function customerDelete(){
-    document.getElementById("findButton").hidden = true;
-    document.getElementById("deleteButton").removeAttribute('hidden');
     document.getElementById("deleteCustomer").submit();
     document.getElementById("findButton").hidden = true;
     document.getElementById("deleteButton").removeAttribute('hidden');
