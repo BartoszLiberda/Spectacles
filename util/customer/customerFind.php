@@ -17,7 +17,6 @@
     {
         $row = mysqli_fetch_array($result); // gets the rows from the table that was returned from the db
 
-        $_SESSION['customerIDDelete'] = $row['CustomerID']; // sets the session variable to variable fetched from db
         $_SESSION['customerFirstNameDelete'] = $row['FirstName']; // sets the session variable to variable fetched from db
         $_SESSION['customerSurnameDelete'] = $row['Surname']; // sets the session variable to variable fetched from db
         $_SESSION['customerEircodeDelete'] = $row['Eircode']; // sets the session variable to variable fetched from db
@@ -27,7 +26,6 @@
     }
     else if ($rowcount == 0) // if nothing was found
     {
-        unset($_SESSION['customerIDDelete']); // clears the session variable 
         unset($_SESSION['customerFirstNameDelete']); // clears the session variable
         unset($_SESSION['customerSurnameDelete']); // clears the session variable
         unset($_SESSION['customerEircodeDelete']); // clears the session variable

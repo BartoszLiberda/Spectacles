@@ -110,7 +110,7 @@
                                         type="text"
                                         name="fnameD"
                                         id="fnameD"
-                                        value="<?php if(ISSET($_SESSION['customerFirstNameDelete']))echo $_SESSION['personid'] ?>"
+                                        value="<?php if(ISSET($_SESSION['customerFirstNameDelete']))echo $_SESSION['customerFirstNameDelete'] ?>"
                                         disabled
                                     />
                                 </p>
@@ -120,7 +120,7 @@
                                         type="text"
                                         name="lnameD"
                                         id="lnameD"
-                                        value="<?php if(ISSET($_SESSION['customerSurnameDelete']))echo $_SESSION['personid'] ?>"
+                                        value="<?php if(ISSET($_SESSION['customerSurnameDelete']))echo $_SESSION['customerSurnameDelete'] ?>"
                                         disabled
                                     />
                                 </p>
@@ -132,7 +132,7 @@
                                         type="text"
                                         name="eircodeD"
                                         id="eircodeD"
-                                        value="<?php if(ISSET($_SESSION['customerEircodeDelete']))echo $_SESSION['personid'] ?>"
+                                        value="<?php if(ISSET($_SESSION['customerEircodeDelete']))echo $_SESSION['customerEircodeDelete'] ?>"
                                         disabled
                                     />
                                 </p>
@@ -142,7 +142,7 @@
                                         type="text"
                                         name="addressD"
                                         id="addressD"
-                                        value="<?php if(ISSET($_SESSION['customerAddressDelete']))echo $_SESSION['personid'] ?>"
+                                        value="<?php if(ISSET($_SESSION['customerAddressDelete']))echo $_SESSION['customerAddressDelete'] ?>"
                                         disabled
                                     />
                                 </p>
@@ -154,7 +154,7 @@
                                         type="date"
                                         name="dobD"
                                         id="dobD"
-                                        value="<?php if(ISSET($_SESSION['customerDOBDelete']))echo $_SESSION['personid'] ?>"
+                                        value="<?php if(ISSET($_SESSION['customerDOBDelete']))echo $_SESSION['customerDOBDelete'] ?>"
                                         disabled
                                     />
                                 </p>
@@ -164,7 +164,7 @@
                                         type="text"
                                         name="phoneD"
                                         id="phoneD"
-                                        value="<?php if(ISSET($_SESSION['customerPhoneDelete']))echo $_SESSION['personid'] ?>"
+                                        value="<?php if(ISSET($_SESSION['customerPhoneDelete']))echo $_SESSION['customerPhoneDelete'] ?>"
                                         disabled
                                     />
                                 </p>
