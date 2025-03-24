@@ -102,6 +102,7 @@
                                         type="text"
                                         name="customerID"
                                         id="customerID"
+                                        value="<?php if(ISSET($_SESSION['customerIDDelete']))echo $_SESSION['customerIDDelete'] ?>"
                                     />
                                 </p>
                                 <p class="nameDelete">
@@ -173,7 +174,7 @@
                             <div class="buttonGroup">
                                 <input class="clear" type="reset" value="Clear"/>
                                 <input hidden class="submit" id="deleteButton" type="button" value="Delete"/>
-                                <input class="submit" id="findButton" type="submit" value="Find">
+                                <input class="submit" id="findButton" type="button" onclick="customerDelete()" value="Find">
                             </div>
                         </form>
                     </div>
