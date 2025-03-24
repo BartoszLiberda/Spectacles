@@ -3,7 +3,7 @@
 
     $id = $_POST['customerID'];
 
-    $sqlLookUp = "SELECT * FROM EyeTest WHERE CustomerID = $id and Del_Tag = 0";
+    $sqlLookUp = "SELECT * FROM Customer WHERE CustomerID = $id and Del_Tag = 0";
     $row = mysqli_fetch_array($result);
 
     if(!mysqli_query($con,$sqlLookUp))
