@@ -178,7 +178,11 @@ function editCustomerAmmend(className){
     }
 }
 
+function customerFind(){
+    document.getElementById("findCustomer").action = "customer.html.php?deleted=true";
+    document.getElementById("findCustomer").submit();
+}
+
 function customerDelete(){
-    document.getElementById("deleteCustomer").action = "customer.html.php?deleted=true";
     document.getElementById("deleteCustomer").submit();
 }

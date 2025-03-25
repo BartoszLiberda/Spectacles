@@ -1,9 +1,10 @@
 <?php
+    session_start();
     include('../db.inc.php');
 
     $id = $_SESSION['customerIDDelete'];
 
-    $sqlLookUp = "SELECT * FROM EyeTest WHERE CustomerID = $id and Del_Tag = 0";
+    $sqlLookUp = "UPDATE Customer SET Del_Tag = 1 WHERE CustomerID = $id";
     $row = mysqli_fetch_array($result);
 
     if(!mysqli_query($con,$sqlLookUp))
