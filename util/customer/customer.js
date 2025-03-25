@@ -179,7 +179,6 @@ function editCustomerAmmend(className){
 }
 
 function customerDelete(){
+    document.getElementById("deleteCustomer").action = "customer.html.php?deleted=true";
     document.getElementById("deleteCustomer").submit();
-    document.getElementById("findButton").hidden = true;
-    document.getElementById("deleteButton").removeAttribute('hidden');
 }
