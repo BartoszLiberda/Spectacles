@@ -92,7 +92,7 @@
                     <script>
                         window.onload = function () {
                             const urlParams = new URLSearchParams(window.location.search);
-                            if (urlParams.has("deleted")) {
+                            if (urlParams.has("found")) {
                                 document.getElementById("findButton").hidden = true;
                                 document.getElementById("deleteButton").removeAttribute("hidden");
                             }
