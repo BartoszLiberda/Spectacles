@@ -4,10 +4,9 @@
 
     $id = $_SESSION['customerIDDelete'];
 
-    $sqlLookUp = "UPDATE Customer SET Del_Tag = 1 WHERE CustomerID = $id";
-    $row = mysqli_fetch_array($result);
+    $sql = "UPDATE Customer SET Del_Tag = 1 WHERE CustomerID = $id";
 
-    if(!mysqli_query($con,$sqlLookUp))
+    if(!mysqli_query($con,$sql))
     {
         die("An Error in the SQL Query : " . mysqli_error($con));
     }
