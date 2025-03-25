@@ -99,7 +99,7 @@
                         };
                     </script>
                     <div class="deleteCustomer">
-                        <form id="findCustomer" action="../../util/customer/customerFind.php" method="Post">
+                        <form id="deleteCustomer" action="../../util/customer/customerFind.php" method="Post">
                             <div class="title">
                                 <img src="../../assets/removeCustomer.svg" width="32px" height="32px">
                                 <h1>Delete Customer</h1>
@@ -182,11 +182,11 @@
                             <p class="error" id="deleteCustomerError"></p>
                             <div class="buttonGroup">
                                 <input class="clear" type="button" value="Clear"/>
-                                <input hidden class="submit" id="deleteButton" type="button" onclick="customerDelete()" value="Delete"/>
-                                <input class="submit" id="findButton" type="button" onclick="customerFind()" value="Find">
+                                <input hidden class="submit" id="deleteButton" type="button" onclick="deleteCustomer()" value="Delete"/>
+                                <input class="submit" id="findButton" type="button" onclick="customerDelete()" value="Find">
                             </div>
                         </form>
-                        <form id="deleteCustomer" action="../../util/customer/customerDelete.php"></form>
+                        <form id="customerDelete" action="../../util/customer/customerDelete.php"></form>
                     </div>
                 </div>
                 <script src="../../util/customer/customer.js"></script>
