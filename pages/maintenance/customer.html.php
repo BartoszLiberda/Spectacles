@@ -272,45 +272,45 @@
                             <th>Eircode</th>
                         </tr>
                         <div class="scroll-box">
-                        <?php 
-                            if (!isset($_SESSION["customerSearchSQL"])) {
-                                $_SESSION["customerSearchSQL"] = "SELECT CustomerID, FirstName, Surname, DateOfBirth, PhoneNumber, Address, Eircode FROM Customer WHERE Del_Tag = 0";
-                            }
-                            include "../../util/db.inc.php";
-                            if(!$result = mysqli_query($con,$_SESSION["customerSearchSQL"])){
-                                die('Error in querying the database : ' . mysqli_error($con));
-                            }
-                        
-                            while($row = mysqli_fetch_array($result))
-                            {
-                                $id = $row['CustomerID'];
-                                $name = $row['FirstName'];
-                                $surname = $row['Surname'];
-                                $dob = $row['DateOfBirth'];
-                                $phone = $row['PhoneNumber'];
-                                $address = $row['Address'];
-                                $eircode = $row['Eircode'];
-                                echo "
-                                    <tr>
-                                        <form id='ammendCustomer$id' action='../../util/customer/customerAmmend.php' method='Post'>
-                                            <input type='hidden' name='idA' id='idA' value='$id'>
-                                            <td><input type='text' value='$id' disabled></td>
-                                            <td><input class='$id' name='nameA' id='nameA' type='text' value='$name' disabled></td>
-                                            <td><input class='$id' name='sNameA' id='sNameA' type='text' value='$surname' disabled></td>
-                                            <td><input class='$id' name='dobA' id='dobA' type='date' value='$dob' disabled></td>
-                                            <td><input class='$id' name='phoneA' id='phoneA' type='text' value='$phone' disabled></td>
-                                            <td><input class='$id' name='addressA' id='addressA' type='text' value='$address' disabled></td>
-                                            <td><input class='$id' name='eircodeA' id='eircodeA' type='text' value='$eircode' disabled></td>
-                                            <td>
-                                                <img src='../../assets/ammendCustomer.svg' id='edit$id' class='visible' onclick='editCustomer($id)'>
-                                            </td>
-                                            <td><img src='../../assets/no.svg' id='cancel$id' class='hidden' onclick='editCustomerCancel($id)'></td>
-                                            <td><img src='../../assets/yes.svg' id='ammend$id' class='hidden' onclick='editCustomerAmmend($id)'></td>
-                                        </form>
-                                    </tr>
-                                ";
-                            }
-                        ?>
+                            <?php 
+                                if (!isset($_SESSION["customerSearchSQL"])) {
+                                    $_SESSION["customerSearchSQL"] = "SELECT CustomerID, FirstName, Surname, DateOfBirth, PhoneNumber, Address, Eircode FROM Customer WHERE Del_Tag = 0";
+                                }
+                                include "../../util/db.inc.php";
+                                if(!$result = mysqli_query($con,$_SESSION["customerSearchSQL"])){
+                                    die('Error in querying the database : ' . mysqli_error($con));
+                                }
+                            
+                                while($row = mysqli_fetch_array($result))
+                                {
+                                    $id = $row['CustomerID'];
+                                    $name = $row['FirstName'];
+                                    $surname = $row['Surname'];
+                                    $dob = $row['DateOfBirth'];
+                                    $phone = $row['PhoneNumber'];
+                                    $address = $row['Address'];
+                                    $eircode = $row['Eircode'];
+                                    echo "
+                                        <tr>
+                                            <form id='ammendCustomer$id' action='../../util/customer/customerAmmend.php' method='Post'>
+                                                <input type='hidden' name='idA' id='idA' value='$id'>
+                                                <td><input type='text' value='$id' disabled></td>
+                                                <td><input class='$id' name='nameA' id='nameA' type='text' value='$name' disabled></td>
+                                                <td><input class='$id' name='sNameA' id='sNameA' type='text' value='$surname' disabled></td>
+                                                <td><input class='$id' name='dobA' id='dobA' type='date' value='$dob' disabled></td>
+                                                <td><input class='$id' name='phoneA' id='phoneA' type='text' value='$phone' disabled></td>
+                                                <td><input class='$id' name='addressA' id='addressA' type='text' value='$address' disabled></td>
+                                                <td><input class='$id' name='eircodeA' id='eircodeA' type='text' value='$eircode' disabled></td>
+                                                <td>
+                                                    <img src='../../assets/ammendCustomer.svg' id='edit$id' class='visible' onclick='editCustomer($id)'>
+                                                </td>
+                                                <td><img src='../../assets/no.svg' id='cancel$id' class='hidden' onclick='editCustomerCancel($id)'></td>
+                                                <td><img src='../../assets/yes.svg' id='ammend$id' class='hidden' onclick='editCustomerAmmend($id)'></td>
+                                            </form>
+                                        </tr>
+                                    ";
+                                }
+                            ?>
                         </div>
                     </table>
                 </div>
