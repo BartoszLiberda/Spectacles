@@ -128,8 +128,7 @@
 .bottom table{
     width: 100%;
     text-align: center;
-    overflow-y:scroll; 
-    height:100%; 
+    overflow-y:scroll;  
     display:block;  
 }
 
@@ -146,7 +145,6 @@
     border: none;
     border-bottom: solid 1px var(--main);
     text-align: center;
-    position:fixed; 
 }
 
 .bottom table td img{
