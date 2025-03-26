@@ -137,9 +137,6 @@
     padding-top: 0.5%;
     padding-bottom: 0.5%;
     border-bottom: solid 1px var(--main); 
-    position: sticky;
-    background-color: var(--background);
-    z-index: 2;
 }
 
 .bottom table td input{
@@ -148,10 +145,12 @@
     border: none;
     border-bottom: solid 1px var(--main);
     text-align: center;
+}
+
+.tableTop{
     position: sticky;
-    background-color: var(--background);
     top: 0;
-    z-index: 2;
+    background-color: var(--background);
 }
 
 .bottom table td img{
