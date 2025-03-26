@@ -174,7 +174,7 @@
                                         type="text"
                                         name="phoneD"
                                         id="phoneD"
-                                        value="<?php echo $_SESSION['customerPhoneDelete'] ?>"
+                                        value="<?php if(ISSET($_SESSION['customerPhoneDelete']))echo $_SESSION['customerPhoneDelete'] ?>"
                                         disabled
                                     />
                                 </p>
