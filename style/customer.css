@@ -138,7 +138,7 @@
     padding-bottom: 0.5%;
     border-bottom: solid 1px var(--main); 
     position: sticky;
-    background-color: transparent;
+    background-color: var(--background);
     top: 0;
 }
 
