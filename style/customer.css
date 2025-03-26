@@ -130,6 +130,7 @@
     text-align: center;
     overflow-y:scroll;  
     display:block;  
+    height: 50%;
 }
 
 .bottom table th{
