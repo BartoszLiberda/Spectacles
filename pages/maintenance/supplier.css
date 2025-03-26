@@ -1,0 +1,94 @@
+label {
+ display: inline-block;
+}
+
+.form-row {
+  display: flex;
+}
+input{
+	margin: 0px;
+	border-radius: 10px;
+}
+
+.input1{
+	width: 70%;
+	padding-left: 40px;
+}
+
+.input2{
+	width: 200%;
+}
+.input3{
+	padding-left:70px;
+}
+
+.id input{
+	width: 5%;
+}
+
+.id2 input{
+	width: 5%;
+}	
+
+
+.form-group {
+  width: 30%;
+}
+
+
+.form-group input {
+  width: 100%;
+
+}
+
+.form2{
+	display:flex;
+	justify-content: center;
+}
+
+.top{
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: row;
+	height: 50%;
+}
+
+.bottom{
+	display: flex;
+	justify-content: center;
+	align-items:	center;
+	flex-direction: column;
+	height: 50%;
+}
+
+.spacer{
+	border-bottom: solid 1px var(--main);
+	border-left: solid 1px var(--main);
+}
+
+.addSupplier{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40%;
+}
+
+.deletesup{
+	display:	flex;
+	align-items: center;
+	justify-content:	center;
+	width:	40%;
+}
+
+.ammend{
+	flex-direction: column;
+	display:	flex;
+	align-items: start;
+	justify-content: center;
+	width:	40%;
+}
+	
+	
+	
+
+	
