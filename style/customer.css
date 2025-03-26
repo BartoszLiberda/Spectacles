@@ -196,4 +196,5 @@
 
 .scroll-box{
     overflow-y: auto;
+    max-height: 35%
 }
