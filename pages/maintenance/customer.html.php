@@ -181,7 +181,7 @@
                             </div>
                             <p class="error" id="deleteCustomerError"></p>
                             <div class="buttonGroup">
-                                <input class="submit" type="button" onclick="customerClear()" value="Clear"/>
+                                <input class="clear" id="clearButton" type="button" onclick="customerClear()" value="Clear"/>
                                 <input hidden class="submit" id="deleteButton" type="button" onclick="deleteCustomer()" value="Delete"/>
                                 <input class="submit" id="findButton" type="button" onclick="customerDelete()" value="Find">
                             </div>

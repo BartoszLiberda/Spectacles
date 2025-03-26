@@ -130,7 +130,7 @@ function addCustomer(){
 
 function deleteCustomer(){
     if(confirm("Are You Sure You Want To Delete ?")){
-        document.getElementById("deleteCustomer").submit();
+        document.getElementById("customerDelete").submit();
     }else{
         return;
     }
