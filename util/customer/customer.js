@@ -130,6 +130,8 @@ function addCustomer(){
 
 function deleteCustomer(){
     if(confirm("Are You Sure You Want To Delete ?")){
+        localStorage.setItem("findButtonHidden", "false");
+        localStorage.setItem("deleteButtonHidden", "true");
         document.getElementById("customerDelete").submit();
     }else{
         return;
@@ -181,10 +183,12 @@ function editCustomerAmmend(className){
 function customerDelete(){
     localStorage.setItem("findButtonHidden", "true");
     localStorage.setItem("deleteButtonHidden", "false");
-    
+
     document.getElementById("deleteCustomer").submit();
 }
 
 function customerClear(){
+    localStorage.setItem("findButtonHidden", "false");
+    localStorage.setItem("deleteButtonHidden", "true");
     document.getElementById("customerClear").submit();
 }
