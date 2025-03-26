@@ -7,6 +7,7 @@
     unset($_SESSION['customerAddressDelete']); // clears the session variable
     unset($_SESSION['customerDOBDelete']); // clears the session variable
     unset($_SESSION['customerPhoneDelete']); // clears the session variable
+    unset($_SESSION['customerDeleteError']);
 
     header("Location: ../../pages/maintenance/customer.html.php");
     exit();
