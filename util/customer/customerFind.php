@@ -1,5 +1,4 @@
 <?php
-    session_start();
     include('../db.inc.php');
 
     $id = $_POST['customerID'];
