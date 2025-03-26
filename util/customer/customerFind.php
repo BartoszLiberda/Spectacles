@@ -11,7 +11,7 @@
         die("An Error in the SQL Query : " . mysqli_error($con));
     }
     
-    $rowcount = mysqli_num_rows($con); // number of rows that were returned 1 if something was returned 0 if not
+    $rowcount = mysqli_affected_rows($con); // number of rows that were returned 1 if something was returned 0 if not
 
     if($rowcount == 1) // if something was found in the db
     {
