@@ -91,9 +91,10 @@
                     <div class="divider"></div>
                     <script>
                         window.onload = function () {
-                            const urlParams = new URLSearchParams(window.location.search);
-                            if (urlParams.has("found")) {
+                            if (localStorage.getItem("findButtonHidden") === "true") {
                                 document.getElementById("findButton").hidden = true;
+                            }
+                            if (localStorage.getItem("deleteButtonHidden") === "false") {
                                 document.getElementById("deleteButton").removeAttribute("hidden");
                             }
                         };

@@ -179,6 +179,9 @@ function editCustomerAmmend(className){
 }
 
 function customerDelete(){
+    localStorage.setItem("findButtonHidden", "true");
+    localStorage.setItem("deleteButtonHidden", "false");
+    
     document.getElementById("deleteCustomer").submit();
 }
 
