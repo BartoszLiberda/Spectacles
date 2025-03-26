@@ -193,3 +193,7 @@
     font-size: small;
     text-align: center;
 }
+
+.scroll-box{
+    overflow-y: auto;
+}

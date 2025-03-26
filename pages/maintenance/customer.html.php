@@ -271,6 +271,7 @@
                             <th>Address</th>
                             <th>Eircode</th>
                         </tr>
+                        <div class="scroll-box">
                         <?php 
                             if (!isset($_SESSION["customerSearchSQL"])) {
                                 $_SESSION["customerSearchSQL"] = "SELECT CustomerID, FirstName, Surname, DateOfBirth, PhoneNumber, Address, Eircode FROM Customer WHERE Del_Tag = 0";
@@ -310,6 +311,7 @@
                                 ";
                             }
                         ?>
+                        </div>
                     </table>
                 </div>
             </div>
