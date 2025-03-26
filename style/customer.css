@@ -145,6 +145,9 @@
     border: none;
     border-bottom: solid 1px var(--main);
     text-align: center;
+    position: sticky;
+    top: 0;
+    background-color: var(--background);
 }
 
 .bottom table .tableTop{
