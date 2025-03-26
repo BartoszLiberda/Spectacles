@@ -194,40 +194,8 @@
     text-align: center;
 }
 
-.scroll-box {
-    max-height: 300px; /* Adjust height as needed */
-    overflow-y: auto; /* Enables scrolling when content overflows */
-    border: 1px solid #ccc; /* Optional: Adds a border for clarity */
-    padding: 10px; /* Optional: Adds space inside the box */
-}
-
-/* Ensure the table layout remains intact */
-.scroll-box table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.scroll-box th,
-.scroll-box td {
-    padding: 8px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
-/* Optional: Customize scrollbar for better appearance */
-.scroll-box::-webkit-scrollbar {
-    width: 8px;
-}
-
-.scroll-box::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
-.scroll-box::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 4px;
-}
-
-.scroll-box::-webkit-scrollbar-thumb:hover {
-    background: #555;
+.scroll-box{
+    overflow-y: scroll;
+    height: 50%;
+    display: block;
 }
