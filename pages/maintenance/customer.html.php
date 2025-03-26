@@ -181,12 +181,13 @@
                             </div>
                             <p class="error" id="deleteCustomerError"></p>
                             <div class="buttonGroup">
-                                <input class="clear" type="button" value="Clear"/>
+                                <input class="submit" type="button" onclick="customerClear()" value="Clear"/>
                                 <input hidden class="submit" id="deleteButton" type="button" onclick="deleteCustomer()" value="Delete"/>
                                 <input class="submit" id="findButton" type="button" onclick="customerDelete()" value="Find">
                             </div>
                         </form>
                         <form id="customerDelete" action="../../util/customer/customerDelete.php"></form>
+                        <form id="customerClear" action="../../util/customer/customerClear.php"></form>
                     </div>
                 </div>
                 <script src="../../util/customer/customer.js"></script>

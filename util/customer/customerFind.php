@@ -4,9 +4,9 @@
 
     $id = $_POST['customerID'];
 
-    $sqlLookUp = "SELECT * FROM Customer WHERE CustomerID = $id and Del_Tag = 0";
+    $sql = "SELECT * FROM Customer WHERE CustomerID = $id and Del_Tag = 0";
 
-    if(!$result = mysqli_query($con,$sqlLookUp))
+    if(!$result = mysqli_query($con,$sql))
     {
         die("An Error in the SQL Query : " . mysqli_error($con));
     }
