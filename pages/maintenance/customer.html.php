@@ -180,7 +180,7 @@
                                     />
                                 </p>
                             </div>
-                            <p class="error" id="deleteCustomerError"></p>
+                            <p class="error" id="deleteCustomerError"><?php if(ISSET($_SESSION['customerDeleteError']))echo $_SESSION['customerDeleteError'] ?></p>
                             <div class="buttonGroup">
                                 <input class="clear" id="clearButton" type="button" onclick="customerClear()" value="Clear"/>
                                 <input hidden class="submit" id="deleteButton" type="button" onclick="deleteCustomer()" value="Delete"/>

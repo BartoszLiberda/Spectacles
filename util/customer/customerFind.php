@@ -24,6 +24,7 @@
         $_SESSION['customerAddressDelete'] = $row['Address']; // sets the session variable to variable fetched from db
         $_SESSION['customerDOBDelete'] = $row['DateOfBirth']; // sets the session variable to variable fetched from db
         $_SESSION['customerPhoneDelete'] = $row['PhoneNumber']; // sets the session variable to variable fetched from db
+        unset($_SESSION['customerDeleteError']);
     }
     else if ($rowcount == 0) // if nothing was found
     {
@@ -34,6 +35,7 @@
         unset($_SESSION['customerAddressDelete']); // clears the session variable
         unset($_SESSION['customerDOBDelete']); // clears the session variable
         unset($_SESSION['customerPhoneDelete']); // clears the session variable
+        $_SESSION['customerDeleteError'] = "Customer Not Found";
     }
 
     mysqli_close($con);
