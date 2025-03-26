@@ -137,7 +137,9 @@
     padding-top: 0.5%;
     padding-bottom: 0.5%;
     border-bottom: solid 1px var(--main); 
-    position: fixed;
+    position: sticky;
+    background-color: transparent;
+    top: 0;
 }
 
 .bottom table td input{
