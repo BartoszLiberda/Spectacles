@@ -148,6 +148,9 @@
     border: none;
     border-bottom: solid 1px var(--main);
     text-align: center;
+    position: sticky;
+    background-color: var(--background);
+    top: 0;
 }
 
 .bottom table td img{
