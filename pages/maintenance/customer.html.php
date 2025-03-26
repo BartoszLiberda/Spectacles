@@ -89,15 +89,7 @@
                         </form>
                     </div>
                     <div class="divider"></div>
-                    <script>
-                        window.onload = function () {
-                            const urlParams = new URLSearchParams(window.location.search);
-                            if (urlParams.has("found")) {
-                                document.getElementById("findButton").hidden = true;
-                                document.getElementById("deleteButton").removeAttribute("hidden");
-                            }
-                        };
-                    </script>
+                    
                     <div class="deleteCustomer">
                         <form id="deleteCustomer" action="../../util/customer/customerFind.php" method="Post">
                             <div class="title">
