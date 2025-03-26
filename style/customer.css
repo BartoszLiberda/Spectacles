@@ -139,7 +139,7 @@
     border-bottom: solid 1px var(--main); 
     position: sticky;
     background-color: var(--background);
-    top: 0;
+    z-index: 2;
 }
 
 .bottom table td input{
@@ -151,6 +151,7 @@
     position: sticky;
     background-color: var(--background);
     top: 0;
+    z-index: 2;
 }
 
 .bottom table td img{
