@@ -147,7 +147,7 @@
     text-align: center;
 }
 
-table .tableTop{
+.bottom table .tableTop{
     position: sticky;
     top: 0;
     background-color: var(--background);
