@@ -128,16 +128,12 @@
 .bottom table{
     width: 100%;
     text-align: center;
-    overflow-y:scroll;  
-    display:block;  
-    height: 40%;
 }
 
 .bottom table th{
     padding-top: 0.5%;
     padding-bottom: 0.5%;
     border-bottom: solid 1px var(--main); 
-    position: sticky;
     background-color: var(--background);
     z-index: 2;
 }
@@ -148,9 +144,7 @@
     border: none;
     border-bottom: solid 1px var(--main);
     text-align: center;
-    position: sticky;
     background-color: var(--background);
-    top: 0;
     z-index: 2;
 }
 
@@ -202,4 +196,10 @@
     color: red;
     font-size: small;
     text-align: center;
+}
+
+.scroll-box{
+    overflow-y:scroll;  
+    display:block;  
+    height: 40%;
 }
