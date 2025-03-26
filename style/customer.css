@@ -123,14 +123,13 @@
 .bottom{
     padding-left: 2%;
     padding-right: 1%;
+    height: 50%;
+    overflow-y: auto;
 }
 
 .bottom table{
     width: 100%;
     text-align: center;
-    overflow-y:scroll;  
-    display:block;  
-    height: 40%;
 }
 
 .bottom table th{
