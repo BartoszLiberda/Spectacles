@@ -179,7 +179,8 @@ function editCustomerAmmend(className){
 }
 
 function customerDelete(){
-    //document.getElementById("deleteCustomer").action = "customer.html.php?found=true";
+    document.getElementById("deleteCustomer").submit();
+    document.getElementById("deleteCustomer").action = "customer.html.php?found=true";
     document.getElementById("deleteCustomer").submit();
 }
 
