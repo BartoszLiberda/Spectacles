@@ -11,7 +11,7 @@ include "../../util/db.inc.php";
 
 // Create and run the query on the database
 // This Retrieves the Supplier ID to use it in the update query. 
-$findSUPID = "SELECT SupplierID FROM Suppliers WHERE SupplierName = '$_POST[addSupplier]'";
+$findSUPID = "SELECT SupplierID FROM Suppliers WHERE Name = '$_POST[addSupplier]'";
 if(!$result = mysqli_query($con,$findSUPID)) // error checking, kills the program and returns an error message
 {
     die ("An error has occured in the SQL Query: ". mysqli_error($con));

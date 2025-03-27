@@ -32,7 +32,7 @@ Purpose: To Stock screen to add delete ammend and view.
                                     <label for="addSupplier">Supplier *</label>
                                         <?php
                                             include '../../util/db.inc.php'; // Include db.inc.php
-                                            $sql = "SELECT SupplierName FROM Suppliers WHERE Del_Tag = 0"; //set up the sql query to get supplier names from Suppliers table
+                                            $sql = "SELECT Name FROM Suppliers WHERE Del_Tag = 0"; //set up the sql query to get supplier names from Suppliers table
                                             if(!$result = mysqli_query($con, $sql)){ // if not it dies, else just return the result set
                                                 die('Error retrieving data '.mysqli_error($con));
                                             }
