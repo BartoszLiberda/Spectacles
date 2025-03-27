@@ -130,7 +130,9 @@ function addCustomer(){
 
 function deleteCustomer(){
     if(confirm("Are You Sure You Want To Delete ?")){
-        document.getElementById("deleteCustomer").submit();
+        localStorage.setItem("findButtonHidden", "false");
+        localStorage.setItem("deleteButtonHidden", "true");
+        document.getElementById("customerDelete").submit();
     }else{
         return;
     }
@@ -179,9 +181,14 @@ function editCustomerAmmend(className){
 }
 
 function customerDelete(){
-    document.getElementById("findButton").hidden = true;
-    document.getElementById("deleteButton").removeAttribute('hidden');
-    document.getElementById("findCustomer").submit();
-    document.getElementById("findButton").hidden = true;
-    document.getElementById("deleteButton").removeAttribute('hidden');
+    localStorage.setItem("findButtonHidden", "true");
+    localStorage.setItem("deleteButtonHidden", "false");
+
+    document.getElementById("deleteCustomer").submit();
+}
+
+function customerClear(){
+    localStorage.setItem("findButtonHidden", "false");
+    localStorage.setItem("deleteButtonHidden", "true");
+    document.getElementById("customerClear").submit();
 }

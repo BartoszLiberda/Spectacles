@@ -89,8 +89,18 @@
                         </form>
                     </div>
                     <div class="divider"></div>
+                    <script>
+                        window.onload = function () {
+                            if (localStorage.getItem("findButtonHidden") === "true") {
+                                document.getElementById("findButton").hidden = true;
+                            }
+                            if (localStorage.getItem("deleteButtonHidden") === "false") {
+                                document.getElementById("deleteButton").removeAttribute("hidden");
+                            }
+                        };
+                    </script>
                     <div class="deleteCustomer">
-                        <form id="deleteCustomer" action="../../util/customer/customerDelete.php" method="Post">
+                        <form id="deleteCustomer" action="../../util/customer/customerFind.php" method="Post">
                             <div class="title">
                                 <img src="../../assets/removeCustomer.svg" width="32px" height="32px">
                                 <h1>Delete Customer</h1>
@@ -102,6 +112,7 @@
                                         type="text"
                                         name="customerID"
                                         id="customerID"
+                                        value="<?php if(ISSET($_SESSION['customerIDDelete']))echo $_SESSION['customerIDDelete'] ?>"
                                     />
                                 </p>
                                 <p class="nameDelete">
@@ -110,6 +121,7 @@
                                         type="text"
                                         name="fnameD"
                                         id="fnameD"
+                                        value="<?php if(ISSET($_SESSION['customerFirstNameDelete']))echo $_SESSION['customerFirstNameDelete'] ?>"
                                         disabled
                                     />
                                 </p>
@@ -119,6 +131,7 @@
                                         type="text"
                                         name="lnameD"
                                         id="lnameD"
+                                        value="<?php if(ISSET($_SESSION['customerSurnameDelete']))echo $_SESSION['customerSurnameDelete'] ?>"
                                         disabled
                                     />
                                 </p>
@@ -130,6 +143,7 @@
                                         type="text"
                                         name="eircodeD"
                                         id="eircodeD"
+                                        value="<?php if(ISSET($_SESSION['customerEircodeDelete']))echo $_SESSION['customerEircodeDelete'] ?>"
                                         disabled
                                     />
                                 </p>
@@ -139,6 +153,7 @@
                                         type="text"
                                         name="addressD"
                                         id="addressD"
+                                        value="<?php if(ISSET($_SESSION['customerAddressDelete']))echo $_SESSION['customerAddressDelete'] ?>"
                                         disabled
                                     />
                                 </p>
@@ -150,6 +165,7 @@
                                         type="date"
                                         name="dobD"
                                         id="dobD"
+                                        value="<?php if(ISSET($_SESSION['customerDOBDelete']))echo $_SESSION['customerDOBDelete'] ?>"
                                         disabled
                                     />
                                 </p>
@@ -159,20 +175,20 @@
                                         type="text"
                                         name="phoneD"
                                         id="phoneD"
+                                        value="<?php if(ISSET($_SESSION['customerPhoneDelete']))echo $_SESSION['customerPhoneDelete'] ?>"
                                         disabled
                                     />
                                 </p>
                             </div>
-                            <p class="error" id="deleteCustomerError"></p>
+                            <p class="error" id="deleteCustomerError"><?php if(ISSET($_SESSION['customerDeleteError']))echo $_SESSION['customerDeleteError'] ?></p>
                             <div class="buttonGroup">
-                                <input class="clear" type="reset" value="Clear"/>
-                                <input hidden class="submit" id="deleteButton" type="button" value="Delete"/>
+                                <input class="clear" id="clearButton" type="button" onclick="customerClear()" value="Clear"/>
+                                <input hidden class="submit" id="deleteButton" type="button" onclick="deleteCustomer()" value="Delete"/>
                                 <input class="submit" id="findButton" type="button" onclick="customerDelete()" value="Find">
                             </div>
                         </form>
-                        <form hidden id="findCustomer" action="../../util/customer/customerFind.php" method="Post">
-                            <input type="hidden" id="customerID2" name="customerID2">
-                        </form>
+                        <form id="customerDelete" action="../../util/customer/customerDelete.php"></form>
+                        <form id="customerClear" action="../../util/customer/customerClear.php"></form>
                     </div>
                 </div>
                 <script src="../../util/customer/customer.js"></script>
@@ -183,78 +199,80 @@
                         <h1>Edit Customer</h1>
                     </div>
                     <table>
-                        <tr>
-                            <form id="searchCustomer" action="../../util/customer/customerSearch.php" method="Post">
-                                <td>
-                                    <input 
-                                        type="text" 
-                                        name="IDS" 
-                                        id="IDS"
-                                        placeholder="Enter ID"
-                                    />
-                                </td>
-                                <td>
-                                    <input 
-                                        type="text" 
-                                        name="fNameS" 
-                                        id="fNameS"
-                                        placeholder="Enter Name"
-                                    />
-                                </td>
-                                <td>
-                                    <input 
-                                        type="text" 
-                                        name="sNameS" 
-                                        id="sNameS"
-                                        placeholder="Enter Surname"
-                                    />
-                                </td>
-                                <td>
-                                    <input 
-                                        type="text" 
-                                        name="dobS" 
-                                        id="dobS"
-                                        placeholder="Enter Date Of Birth"
-                                    />
-                                </td>
-                                <td>
-                                    <input 
-                                        type="text" 
-                                        name="pNumS" 
-                                        id="pNumS"
-                                        placeholder="Enter Phone Number"
-                                    />
-                                </td>
-                                <td>
-                                    <input 
-                                        type="text" 
-                                        name="AddressS" 
-                                        id="AddressS"
-                                        placeholder="Enter Address"
-                                    />
-                                </td>
-                                <td>
-                                    <input 
-                                        type="text" 
-                                        name="EircodeS"
-                                        id="EircodeS"
-                                        placeholder="Enter Eircode"
-                                    />
-                                </td>
-                                <td>
-                                    <img src="../../assets/searchCustomer.svg" onclick=(searchCustomer())>
-                                </td>
-                            </form>
-                        </tr>
-                        <tr>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Surname</th>
-                            <th>DOB</th>
-                            <th>Mobile Number</th>
-                            <th>Address</th>
-                            <th>Eircode</th>
-                        </tr>
+                        <div class="tableTop">
+                            <tr>
+                                <form id="searchCustomer" action="../../util/customer/customerSearch.php" method="Post">
+                                    <td>
+                                        <input 
+                                            type="text" 
+                                            name="IDS" 
+                                            id="IDS"
+                                            placeholder="Enter ID"
+                                        />
+                                    </td>
+                                    <td>
+                                        <input 
+                                            type="text" 
+                                            name="fNameS" 
+                                            id="fNameS"
+                                            placeholder="Enter Name"
+                                        />
+                                    </td>
+                                    <td>
+                                        <input 
+                                            type="text" 
+                                            name="sNameS" 
+                                            id="sNameS"
+                                            placeholder="Enter Surname"
+                                        />
+                                    </td>
+                                    <td>
+                                        <input 
+                                            type="text" 
+                                            name="dobS" 
+                                            id="dobS"
+                                            placeholder="Enter Date Of Birth"
+                                        />
+                                    </td>
+                                    <td>
+                                        <input 
+                                            type="text" 
+                                            name="pNumS" 
+                                            id="pNumS"
+                                            placeholder="Enter Phone Number"
+                                        />
+                                    </td>
+                                    <td>
+                                        <input 
+                                            type="text" 
+                                            name="AddressS" 
+                                            id="AddressS"
+                                            placeholder="Enter Address"
+                                        />
+                                    </td>
+                                    <td>
+                                        <input 
+                                            type="text" 
+                                            name="EircodeS"
+                                            id="EircodeS"
+                                            placeholder="Enter Eircode"
+                                        />
+                                    </td>
+                                    <td>
+                                        <img src="../../assets/searchCustomer.svg" onclick=(searchCustomer())>
+                                    </td>
+                                </form>
+                            </tr>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Surname</th>
+                                <th>DOB</th>
+                                <th>Mobile Number</th>
+                                <th>Address</th>
+                                <th>Eircode</th>
+                            </tr>
+                        </div>
                         <?php 
                             if (!isset($_SESSION["customerSearchSQL"])) {
                                 $_SESSION["customerSearchSQL"] = "SELECT CustomerID, FirstName, Surname, DateOfBirth, PhoneNumber, Address, Eircode FROM Customer WHERE Del_Tag = 0";

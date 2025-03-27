@@ -1,3 +1,6 @@
+<!--    Bartosz Liberda     -->
+<!--       C00295791        -->
+
 <?php
     include('../db.inc.php');
 
@@ -13,7 +16,5 @@
 
     mysqli_close($con);
     header("Location: ../../pages/maintenance/customer.html.php");
-    echo "<script type='text/javascript'>alert('Customer Added')</script>";
     exit();
-
 ?>

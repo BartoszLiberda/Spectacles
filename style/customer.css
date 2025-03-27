@@ -128,12 +128,15 @@
 .bottom table{
     width: 100%;
     text-align: center;
+    overflow-y:scroll;  
+    display:block;  
+    height: 40%;
 }
 
 .bottom table th{
     padding-top: 0.5%;
     padding-bottom: 0.5%;
-    border-bottom: solid 1px var(--main);
+    border-bottom: solid 1px var(--main); 
 }
 
 .bottom table td input{
@@ -142,6 +145,12 @@
     border: none;
     border-bottom: solid 1px var(--main);
     text-align: center;
+}
+
+.bottom table .tableTop{
+    position: sticky;
+    top: 0;
+    background-color: var(--background);
 }
 
 .bottom table td img{
