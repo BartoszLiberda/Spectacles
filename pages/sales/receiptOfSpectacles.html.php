@@ -17,7 +17,7 @@
             ?>
             <div class="display">
                 <div class="title">
-                    <img src="../../assets/editCustomer.svg" width="32px" height="32px">
+                    <img src="../../assets/receipt.svg" width="32px" height="32px">
                     <h1>Reciept Of Spectacles</h1>
                 </div>
                 <table class="receipt">
