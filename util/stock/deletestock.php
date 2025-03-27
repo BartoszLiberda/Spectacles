@@ -20,7 +20,7 @@ if(!$check = mysqli_query($con,$ordersql)){
 // if the item is on order, display an error message and redirect to the stockItem.html.php page
 if(mysqli_num_rows($check) > 0) { // this if statement basically means that since theres a row found it must be on order
     echo "<script>alert('This stock item is currently in use in an order. It cannot be deleted.')</script>";
-    echo "<script>window.location = 'stockItem.html.php'</script>";
+    echo "<script>window.location = '../../pages/maintenance/stockItem.html.php'</script>";
     mysqli_close($con);
 }
 //otherwise
