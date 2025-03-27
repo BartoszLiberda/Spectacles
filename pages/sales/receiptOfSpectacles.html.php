@@ -16,7 +16,10 @@
                 include("../../elements/menu.html.php"); 
             ?>
             <div class="display">
-                <h1>Reciept Of Spectacles</h1>
+                <div class="title">
+                    <img src="../../assets/editCustomer.svg" width="32px" height="32px">
+                    <h1>Reciept Of Spectacles</h1>
+                </div>
                 <table class="receipt">
                     <tr>
                         <th>Spectacle Sales ID</th>

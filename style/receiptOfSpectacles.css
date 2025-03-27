@@ -35,3 +35,9 @@ h1{
     background-color: var(--background);
     color: var(--accent);
 }
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
