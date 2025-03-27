@@ -41,4 +41,4 @@ mysqli_close($con);
 ?>
 
 <!-- Redirect the user back to the stockItem.html.php -->
-<script>window.location = "../../pages/maintenance/sales/stockItem.html.php"</script>
+<script>window.location = "../../pages/maintenance/stockItem.html.php"</script>
