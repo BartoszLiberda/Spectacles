@@ -17,6 +17,9 @@ h1{
 
 .receipt tr input{
     background-color: transparent;
+    border: none;
+    border-bottom: solid 1px var(--main);
+    text-align: center;
 }
 
 .buttonGroup input{
