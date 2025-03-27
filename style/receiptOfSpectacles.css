@@ -15,13 +15,6 @@ h1{
     padding-bottom: 2%;
 }
 
-.receipt tr input{
-    background-color: transparent;
-    border: none;
-    border-bottom: solid 1px var(--main);
-    text-align: center;
-}
-
 .buttonGroup input{
     border: solid 2px var(--accent);
     background-color: transparent;
@@ -41,6 +34,13 @@ h1{
     transition-duration: 150ms;
     background-color: var(--background);
     color: var(--accent);
+}
+
+.receipt table tr input{
+    background-color: transparent;
+    border: none;
+    border-bottom: solid 1px var(--main);
+    text-align: center;
 }
 
 .title{
