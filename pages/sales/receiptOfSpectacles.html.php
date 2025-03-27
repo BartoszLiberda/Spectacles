@@ -49,7 +49,7 @@
                                     <td><input type='text' value='$coating' disabled></td>
                                     <td><input type='date' value='$dateRecieved' disabled></td>
                                     <td class='buttonGroup'>
-                                        <input class='submit' type='submit' value='Recieved'/>
+                                        <input class='submit' type='button' onclick'document.getElementByID('spectacleReceipt$specSalesID').submit()' value='Recieved'/>
                                     </td>
                                 </form>
                             </tr>
