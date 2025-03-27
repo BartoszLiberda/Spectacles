@@ -1,0 +1,426 @@
+/* define the whole page colour variables */
+:root{
+    --background : #D8CBC7;
+    --accent : #638475;
+    --main : black;
+}
+
+/* body holds full width of page but not height to make room for the footer*/
+body{
+    background-color: var(--background);
+    height: 98%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding-top: 1%;
+}
+/* stop links having decoration */
+a{
+    text-decoration: none;
+    color: var(--main);
+}
+/* on hover change link tet colour */
+a:hover{
+    color: var(--accent);
+}
+/* takes up all the height, this holds the body and footer */
+.content{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    height: 100%;
+}
+
+/* this holds the side navigation bar */
+.sideNavBar{
+    margin-right: 2%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: 500;
+    font-size: 18px;
+}
+/* gives the icon left padding */
+.sideNavBar svg {
+    padding-left: 17%;
+}
+ /* remove default li features that html assigns automatically */
+.navbar li{
+    width: 125%;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+/* exagerate that this is the page you are on */
+.navBar .target{
+    font-size:26px;
+    border-bottom: solid 1px var(--main);
+    padding-top: 20%;
+    padding-bottom: 2%;
+}
+
+/* change the target link colour to green */
+.navBar .target a{
+    color: var(--accent);
+}
+
+/* the main content area of the nav bar */
+.navBar .main{
+    padding-top: 15%;
+    padding-bottom: 2%;
+    border-bottom: solid 1px var(--main);
+    font-size: 26px;
+}
+
+/* the sub navigation links */
+.navBar .sub{
+    padding-top: 5%;
+    margin-left: 10%;
+}
+
+/* the dropdown menu */
+.select{
+    padding-top: 2%;
+    padding-right: 5%;
+    color: var(--accent);
+}
+
+/* this is the main content area for the page */
+.display{
+    margin: 2%;
+    width: 100%;
+    border-left: solid 1px var(--main);
+}
+
+/* the footer */
+footer {
+    text-align: center;
+}
+
+/* dont allow text area resizing */
+textarea{
+    resize: none;
+}
+
+/* h1 font size */
+h1{
+    font-size: 25px;
+}
+
+/* form styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* top sector styles */
+.top {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid var(--main);
+}
+
+/* container styles of top layer */
+.container {
+    width: 50%;
+    padding: 20px;
+    border-right: 1px solid var(--main);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* image styles at top area */
+.container img{
+    width: 25px;
+    height: 25px;
+
+    border: none;
+    background-color: transparent;
+}
+
+/* form row display */
+.form-row {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+}
+
+/* label styles in form row area */
+.form-row label {
+    margin-bottom: 4px;
+    font-size: 15px;
+    font-weight: bold;
+}
+ .form-row input, textarea, select, option {
+    background-color: transparent;
+ }
+
+.form-row input:valid, textarea:valid, select:valid, option:valid{
+    background-color: transparent;
+    border: solid 2px var(--accent);
+}
+.form-row input:invalid, textarea:invalid, select:invalid, option:invalid{
+    background-color: transparent;
+    border: solid 2px rgb(143, 33, 33);
+}
+.button-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+.button-row button {
+    padding: 5px 10px;
+    cursor: pointer;
+    border: var(--accent) 2px solid;
+    background-color: transparent;
+    color: var(--accent);
+    border-radius: 25px;
+}
+.button-row button:hover {
+    cursor: pointer;
+    border: var(--accent) 2px solid;
+    background-color: var(--accent);
+    color: white;
+}
+.bottom-container {
+    height: 50%;
+    width: 100%;
+    background: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*add row 1*/
+.Stock{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+.Supplier{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+.Code{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+/*add row 2*/
+.Cost{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+.Retail{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+.Reorderqty{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+/*add row 3*/
+.Description{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+}
+
+/*del row 1*/
+.StockNum{
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+}
+.DelStock{
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+}
+
+/*del row 3*/
+.Description{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+}
+
+/*del row 2*/
+.delSup{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+.delCosts{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+/*del row 4*/
+.searchbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 15px;
+    width: 50%;
+}
+
+.searchbar p {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--accent);
+}
+
+.searchbar select,option {
+    width: 25%;
+    height: 50%;
+    padding: 5px;
+    background-color: transparent;
+}
+
+.deletesubmission{
+    display: flex;
+    justify-content: center;
+    width: 25%;
+}
+
+/*ammend/view*/
+.ammendview {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ammendview input{
+    background-color: transparent;
+}
+
+.buttons{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.buttons button, img{
+    width: 25px;
+    height: 25px;
+
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+.buttons :disabled{
+    cursor: not-allowed;
+}
+
+.searchbarammend{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+    width: 40%;
+}
+
+.searchbarammend p {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--accent);
+    align-items: center;
+}
+
+.searchbarammend select,option {
+    width: 30%;
+    height: 60%;
+    padding: 5px;
+    background-color: transparent;
+}
+/*countersales css*/
+
+/* container for it */
+.countercontainer {
+    margin-top: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* rows within the counter container for alignment */
+.counterrow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 3%;
+}
+
+/* counter column for the button and input */
+.c1c{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    gap:5px;
+    width:100%;
+}
+
+/* default all to transparent */
+.counterrow button,select,option,input {
+    background-color: transparent;
+    width: 25%;
+    height: 50%;
+}
+
+/* column to just align anything if it has labels and provide their width in the row  */
+.countercolumn{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-weight: bold;
+    width:25%;
+}
+
+/* button style input in the counter column */
+.countercolumn input[type="submit"]{
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    border: var(--accent) 2px solid;
+    background-color: var(--accent);
+    color: white;
+}
+
+/* hover effect */
+.countercolumn input[type="submit"]:hover{
+    background-color: transparent;
+    color: var(--accent);
+}
+
+
+/* let them take up their full possible width */
+.countercolumn input,select,button{
+    width: 100%;
+}
