@@ -6,7 +6,7 @@ Name of Screen: countersalesphp.php
 Purpose: To update the total cost and to send the item being chosen and its amount to the stockitemcountersales table.
 -->
 <?php session_start(); // start session here to allow for updating the current total cost
-include 'db.inc.php'; // include the db connection file
+include '../../util/db.inc.php'; // include the db connection file
 date_default_timezone_set("UTC"); // set the default timezone to UTC
 //initialize the totalcost variable
 if (!isset($_SESSION['totalcoststock'])) {

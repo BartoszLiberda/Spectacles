@@ -5,7 +5,7 @@
     Purpose: to get all data for the stock item so we can populate the ammend/view sector
 -->
 <?php
-include 'db.inc.php'; // Include db.inc.php
+include '../../util/db.inc.php'; // Include db.inc.php
 //set up sql select query
 $sql = "SELECT StockID, Name, Description, CostPrice, RetailPrice, STOCK_QTY, SupplierName FROM StockItems WHERE Del_Tag = 0";
 if(!$result=mysqli_query($con,$sql)) //run the query on the db

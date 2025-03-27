@@ -34,6 +34,6 @@ UNSET($_SESSION['totalcoststock']);
 session_destroy();
 
 // redirect to counterSales.html.php page
-header("Location: counterSales.html.php");
+header("Location: ../../pages/maintenance/sales/counterSales.html.php");
 
 ?>

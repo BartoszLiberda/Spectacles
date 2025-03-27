@@ -6,7 +6,7 @@ Name of Screen: listbox.php
 Purpose: To provide a search field in the delete form to search for stock items to delete.
 -->
 <?php
-include 'db.inc.php'; // Include db.inc.php
+include '../../util/db.inc.php'; // Include db.inc.php
 //set up sql select query
 $sql = "SELECT StockID, Name, Description, CostPrice, RetailPrice, 
 STOCK_QTY, SupplierName FROM StockItems WHERE Del_Tag = 0 AND STOCK_QTY <= 0";
