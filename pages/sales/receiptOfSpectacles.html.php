@@ -4,6 +4,11 @@
         <link rel="stylesheet" href="../../style/main.css">
         <link rel="stylesheet" href="../../style/receiptOfSpectacles.css">
     </head>
+    <script>
+        function submit(id){
+            document.getElementById('spectacleReceipt'+id).submit();
+        }
+    </script>
     <body>
         <div class="content">
             <?php 
@@ -49,7 +54,7 @@
                                     <td><input type='text' value='$coating' disabled></td>
                                     <td><input type='date' value='$dateRecieved' disabled></td>
                                     <td class='buttonGroup'>
-                                        <input class='submit' type='button' onclick='document.getElementByID('spectacleReceipt$specSalesID').submit()' value='Recieved'/>
+                                        <input class='submit' type='button' onclick='submit($specSalesID)' value='Recieved'/>
                                     </td>
                                 </form>
                             </tr>
