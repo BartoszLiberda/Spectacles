@@ -7,7 +7,7 @@ Purpose: To Submit the updated information back to the StockItems DB.
 -->
 <?php
 // Include db connection file
-include 'db.inc.php';
+include '../../util/db.inc.php';
 
 // Set up the sql statement and store it in the variable $sql to then run it on the database
 $sql = "UPDATE StockItems SET Name = '$_POST[ammendname]', Description = '$_POST[ammenddesc]', 
@@ -22,5 +22,5 @@ if(!$result = mysqli_query($con, $sql)) { //if error output error message
 // Close the database connection
 mysqli_close($con);
 // Return back to the form page stockItem.html.php
-header("Location: stockItem.html.php"); 
+header("Location: ../../pages/maintenance/sales/stockItem.html.php"); 
 ?>

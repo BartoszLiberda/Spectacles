@@ -7,7 +7,7 @@ Purpose: To mark the selected item as a deleted item.
 -->
 <?php
 // include the DB connection file
-include 'db.inc.php';
+include '../../util/db.inc.php';
 
 // create the sql to check if the item is on order currently
 $ordersql = "SELECT OrderID FROM Orders_StockItems WHERE StockID = '$_POST[delStockNum]'";
@@ -41,4 +41,4 @@ mysqli_close($con);
 ?>
 
 <!-- Redirect the user back to the stockItem.html.php -->
-<script>window.location = "stockItem.html.php"</script>
+<script>window.location = "../../pages/maintenance/sales/stockItem.html.php"</script>

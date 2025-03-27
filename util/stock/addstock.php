@@ -7,7 +7,7 @@ Purpose: To Submit the data retrieved from the add form in stockItem.html.php fi
 -->
 <?php 
 // Include the database connection file.
-include "db.inc.php";
+include "../../util/db.inc.php";
 
 // Create and run the query on the database
 // This Retrieves the Supplier ID to use it in the update query. 
@@ -33,5 +33,5 @@ if(!mysqli_query($con,$sql)) // error checking, kills the program and returns an
 // Close the database connection
 mysqli_close($con);
 // Return back to stockItem.html.php
-header("Location: stockItem.html.php");   
+header("Location: ../../pages/maintenance/sales/stockItem.html.php");   
 ?>
