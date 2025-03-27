@@ -11,7 +11,7 @@ Purpose: To Submit the sale to the CounterSales DB while also destroying the ses
 session_start();
 
 //include the DB connection file
-include 'db.inc.php';
+include '../../util/db.inc.php';
 
 // get the current date for the sale DB
 $date = date('Y-m-d');
@@ -34,6 +34,6 @@ UNSET($_SESSION['totalcoststock']);
 session_destroy();
 
 // redirect to counterSales.html.php page
-header("Location: ../../pages/maintenance/sales/counterSales.html.php");
+header("Location: ../../pages/sales/counterSales.html.php");
 
 ?>

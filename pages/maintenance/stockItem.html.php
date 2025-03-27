@@ -10,6 +10,7 @@ Purpose: To Stock screen to add delete ammend and view.
     <head>
         <link rel="stylesheet" href="../../style/stockitems/main.css"> <!-- link to styles -->
         <script src="../../util/stock/stockitemscripts.js"></script>
+        <script src="../../util/countersales/countersales.js"></script>
 
     </head>
     <body>
