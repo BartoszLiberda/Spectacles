@@ -8,7 +8,7 @@
 
     $id = $_POST['specSaleID'];
     
-    $sql = "UPDATE SpectacleSales SET DateRecieved = $date
+    $sql = "UPDATE SpectacleSales SET DateRecieved = '$date'
     WHERE SpecSalesID = $id";
 
     if(!mysqli_query($con,$sql))
@@ -17,6 +17,6 @@
     }
 
     mysqli_close($con);
-    //header("Location: ../../pages/sales/receiptOfSpectacles.html.php");
-    //exit();
+    header("Location: ../../pages/sales/receiptOfSpectacles.html.php");
+    exit();
 ?>
