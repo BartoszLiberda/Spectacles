@@ -14,3 +14,24 @@ h1{
     text-align: center;
     padding-bottom: 2%;
 }
+
+.buttonGroup input{
+    border: solid 2px var(--accent);
+    background-color: transparent;
+    color: var(--accent);
+    border-radius: 16px;
+    padding: 5px 10px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.buttonGroup .submit{
+    background-color: var(--accent);
+    color: var(--background);
+}
+
+.buttonGroup .submit:hover{
+    transition-duration: 150ms;
+    background-color: var(--background);
+    color: var(--accent);
+}

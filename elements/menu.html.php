@@ -1,3 +1,6 @@
+<!--    Bartosz Liberda     -->
+<!--       C00295791        -->
+
 <div class="sideNavBar">
     <svg width="200" height="100" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
         <text id="SPECTACLES" xml:space="preserve" x="500" y="452" text-anchor="middle" font-family="Tostada" font-size="129" fill="#638475">SPECTACLES</text>
