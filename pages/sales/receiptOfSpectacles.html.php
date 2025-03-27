@@ -23,6 +23,7 @@
                         <th>Status</th>
                     </tr>
                     <?php
+                        include "../../util/db.inc.php";
                         $sqlSpecSale = "SELECT * FROM SpectacleSales WHERE DateRecieved = NULL";
 
                         if(!$resultSales = mysqli_query($con,$sqlSpecSale)){
