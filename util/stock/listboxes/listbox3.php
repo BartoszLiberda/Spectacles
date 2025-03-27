@@ -6,7 +6,7 @@ Name of Screen: listbox3.php
 Purpose: To provide the items they can choose from on the countersales page
 -->
 <?php
-include 'db.inc.php'; // Include db.inc.php
+include '../../util/db.inc.php'; // Include db.inc.php
 date_default_timezone_set('UTC'); // Set default timezone
 //set up sql select query
 $sql = "SELECT StockID, Name, Description, CostPrice, RetailPrice, STOCK_QTY, SupplierName FROM StockItems WHERE Del_Tag = 0 AND STOCK_QTY > 0 AND Name NOT LIKE '%Lenses%' AND Name NOT LIKE '%Spectacles%'";
