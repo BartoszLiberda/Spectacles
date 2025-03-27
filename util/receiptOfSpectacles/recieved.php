@@ -17,6 +17,6 @@
     }
 
     mysqli_close($con);
-    header("Location: ../../pages/sales/receiptOfSpectacles.html.php");
-    exit();
+    //header("Location: ../../pages/sales/receiptOfSpectacles.html.php");
+    //exit();
 ?>
