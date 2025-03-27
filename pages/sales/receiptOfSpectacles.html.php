@@ -23,7 +23,7 @@
                     </tr>
                     <?php
                         include "../../util/db.inc.php";
-                        $sqlSpecSale = "SELECT * FROM SpectacleSales WHERE DateRecieved = NULL";
+                        $sqlSpecSale = "SELECT * FROM SpectacleSales";
 
                         if(!$resultSales = mysqli_query($con,$sqlSpecSale)){
                             die('Error in querying the database : ' . mysqli_error($con));
