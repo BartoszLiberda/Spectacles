@@ -39,7 +39,7 @@ Purpose: To Stock screen to add delete ammend and view.
                                             else{
                                                 echo "<select name='addSupplier' id='addSupplier' required>"; // set up dropdown menu
                                                 while($row = mysqli_fetch_array($result)){ //while it is still cycling through the result set
-                                                    $Suppliers = $row['SupplierName']; //set variable suppliers with the current row value held at SupplierName
+                                                    $Suppliers = $row['Name']; //set variable suppliers with the current row value held at SupplierName
                                                     echo "<option value='$Suppliers'>$Suppliers</option>"; //compile all this info into an options box
                                                 }
                                                 echo "</select>";
