@@ -50,12 +50,12 @@
                             <tr>
                                 <form id='spectacleReceipt$specSalesID' action='../../util/receiptOfSpectacles/recieved.php' method='Post'>
                                     <input type='hidden' name='specSaleID' id='specSaleID' value='$specSalesID'>
-                                    <td><input type='text' value='$specSalesID' disabled></td>
-                                    <td><input type='text' value='$eyeTestID' disabled></td>
-                                    <td><input type='text' value='$stockID' disabled></td>
-                                    <td><input type='text' value='$lenses' disabled></td>
-                                    <td><input type='text' value='$coating' disabled></td>
-                                    <td><input type='date' value='$dateRecieved' disabled></td>
+                                    <td><input class='data' type='text' value='$specSalesID' disabled></td>
+                                    <td><input class='data' type='text' value='$eyeTestID' disabled></td>
+                                    <td><input class='data' type='text' value='$stockID' disabled></td>
+                                    <td><input class='data' type='text' value='$lenses' disabled></td>
+                                    <td><input class='data' type='text' value='$coating' disabled></td>
+                                    <td><input class='data' type='date' value='$dateRecieved' disabled></td>
                                     <td class='buttonGroup'>
                                         <input class='submit' type='button' onclick='submit($specSalesID)' value='Recieved'/>
                                     </td>
