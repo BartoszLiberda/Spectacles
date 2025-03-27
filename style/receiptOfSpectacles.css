@@ -15,6 +15,10 @@ h1{
     padding-bottom: 2%;
 }
 
+.receipt tr input{
+    background-color: transparent;
+}
+
 .buttonGroup input{
     border: solid 2px var(--accent);
     background-color: transparent;
