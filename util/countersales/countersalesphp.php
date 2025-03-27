@@ -58,5 +58,5 @@ else{ //otherwise
 }
 
 mysqli_close($con); //close connection
-header("Location: counterSales.html.php"); //return to checkout page 
+header("Location: ../../pages/sales/counterSales.html.php"); //return to checkout page 
 ?>

@@ -22,5 +22,5 @@ if(!$result = mysqli_query($con, $sql)) { //if error output error message
 // Close the database connection
 mysqli_close($con);
 // Return back to the form page stockItem.html.php
-header("Location: ../../pages/maintenance/sales/stockItem.html.php"); 
+header("Location: ../../pages/maintenance/stockItem.html.php"); 
 ?>

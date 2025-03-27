@@ -33,5 +33,5 @@ if(!mysqli_query($con,$sql)) // error checking, kills the program and returns an
 // Close the database connection
 mysqli_close($con);
 // Return back to stockItem.html.php
-header("Location: ../../pages/maintenance/sales/stockItem.html.php");   
+header("Location: ../../pages/maintenance/stockItem.html.php");   
 ?>
