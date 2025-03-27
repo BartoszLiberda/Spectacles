@@ -19,8 +19,7 @@
                         <th>Frames</th>
                         <th>Lenses</th>
                         <th>Coating</th>
-                        <th>Date</th>
-                        <th>Status</th>
+                        <th>Date Recieved</th>
                     </tr>
                     <?php
                         include "../../util/db.inc.php";
