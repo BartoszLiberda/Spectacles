@@ -1,7 +1,15 @@
-`<html>
+<!--Supplier HTML-->
+<!--Code to add,delete and amend suppliers-->
+<!--C00298638-->
+<!--Samuel Geraghty-->
+<!--February 2025-->
+
+<?php include '../../util/db.inc.php';?>
+
+<html>
     <head>
-        <link rel="stylesheet" href="../../main.css">
-		<link rel="stylesheet" href="supplier.css">
+        <link rel="stylesheet" href="../../style/main.css">
+		<link rel="stylesheet" href="../../style/supplier.css">
 		
 		<script>								
 			function submitForm() {
@@ -19,7 +27,7 @@
             <div class="display" >
                 <div class="top">
                     <div class="addSupplier">
-                            <form action="supplier.php" class="Myform1" onsubmit ="return submitForm(this);" method="POST">
+                            <form action="../../util/supplier/supplier.php" class="Myform1" onsubmit ="return submitForm(this);" method="POST">
                         <h3><u>Add a Supplier</u></h3>
                         <div class="form-row">
                             <div class="form-group input">
@@ -129,9 +137,9 @@
 	<p id="display"> </p>
 
 	 	
-		<form name="deleteForm" action="delete.php" onsubmit="return confirmCheck()" method="post">
+		<form name="deleteForm" action="../../util/supplier/delete.php" onsubmit="return confirmCheck()" method="post">
 		<h3><u> Delete a Supplier</u></h3>
-			<?php include 'listbox.php'; ?><br><br>
+			<?php include '../../util/supplier/listbox.php'; ?><br><br>
 				<div class="id">
 					
 						<label for= "delid">Supplier ID </label>
@@ -186,6 +194,7 @@
 					
 				</div>
 			</div>
+		<?php if(ISSET($_SESSION['SupplierError']))echo $_SESSION['SupplierError'] ?>
 		<input type="submit" value="Delete the record" >
 						</form>
 			</div>
@@ -259,9 +268,9 @@
         <p id="display"></p>
 		
 
-        <form action="Amendview.php" method="post" onsubmit="return confirmCheck2()">
+        <form action="../../util/supplier/Amendview.php" method="post" onsubmit="return confirmCheck2()">
 			<h3><u>Amend/view a Supplier</u></h3>
-			<?php include 'listbox2.php';?><br><br>
+			<?php include '../../util/supplier/listbox2.php';?><br><br>
 			 <input type="button" value="Amend Details"  id="amendViewbutton" onclick="toggleLock()" > 
 				<div class="id2">
             		<label for="amendid">Supplier ID:</label>
@@ -278,7 +287,7 @@
 						<div class="input1">
 							
             					<label for="amendeircode">Eircode:</label>
-            					<input type="text" id="amendsupeircode" name="amendsupeircode" disabled><br>
+            					<input type="text" id="amendsupeircode" name="amendsupeircode" disabled pattern="[a-zA-Z0-9]{7}"><br>
 							
 						</div>
 					</div>
@@ -300,7 +309,7 @@
                   		<div class="input1"> 
 							
 								<label for="amendphonenum">Phone Number:</label>
-								<input type="text" id="amendsupphonenum" name="amendsupphonenum" disabled><br>
+								<input type="text" id="amendsupphonenum" name="amendsupphonenum" disabled pattern="[0-9]{3}[0-9]{7}"><br>
 							
 						</div>
 					</div>
@@ -309,7 +318,7 @@
             		<div class="input2">
 						
 							<label for="ammendwebpage">Webpage:</label>
-							<input type="text" id="amendsupwebpage" name="amendsupwebpage" disabled><br><br>
+							<input type="text" id="amendsupwebpage" name="amendsupwebpage" disabled  pattern="[Ww]{3}[.]{1}[A-Za-z]{1,}[.]{1}[a-zA-Z]{1,}"><br><br>
 						
 					</div>
 				</div>
